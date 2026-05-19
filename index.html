@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Casino Mockup</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand-switch">
+          <button class="switch-chip is-active">Cassino</button>
+          <button class="switch-chip">Esportes</button>
+        </div>
+
+        <div class="sidebar-promos" id="sidebar-promos"></div>
+
+        <nav class="sidebar-nav" id="sidebar-nav"></nav>
+
+        <div class="sidebar-bottom" id="sidebar-bottom"></div>
+      </aside>
+
+      <div class="content-area">
+        <header class="topbar">
+          <div class="topbar-brand">
+            <button class="menu-button" id="mobile-menu-button" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="brand-mark">
+              <span class="brand-diamond"></span>
+              <strong>CASSINO</strong>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="search-field">
+              <span class="search-icon">⌕</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Buscar jogos, provedores, tags..."
+              />
+            </label>
+            <button class="outline-button" data-open-auth="login">Entrar</button>
+            <button class="primary-button" data-open-auth="signup">Cadastrar</button>
+          </div>
+        </header>
+
+        <main class="page">
+          <section class="page-view is-active" id="view-home">
+            <div class="ticker-row" id="ticker-row"></div>
+            <div class="jackpot-grid" id="jackpot-grid"></div>
+            <div class="promo-hero-row" id="promo-hero-row"></div>
+            <section class="shelf-section">
+              <div class="section-header">
+                <h2>Mais jogados da semana</h2>
+                <button class="outline-button compact">Ver todos</button>
+              </div>
+              <div class="game-row" id="popular-row"></div>
+            </section>
+            <section class="shelf-section">
+              <div class="section-header">
+                <h2>Jogos Crash</h2>
+                <button class="outline-button compact">Ver todos</button>
+              </div>
+              <div class="game-row" id="crash-row"></div>
+            </section>
+            <section class="shelf-section">
+              <div class="section-header">
+                <h2>Jogos de Slots</h2>
+                <button class="outline-button compact">Ver todos</button>
+              </div>
+              <div class="game-row" id="slots-row"></div>
+            </section>
+          </section>
+
+          <section class="page-view" id="view-detail">
+            <button class="back-link" id="back-button">← Voltar</button>
+
+            <section class="detail-hero" id="detail-hero">
+              <div class="detail-hero-overlay">
+                <article class="detail-modal-card" id="detail-modal-card"></article>
+              </div>
+            </section>
+
+            <section class="detail-title-bar" id="detail-title-bar"></section>
+
+            <section class="detail-stats">
+              <div class="section-header">
+                <h2>Estatísticas</h2>
+                <div class="pill-tabs">
+                  <button class="pill-tab">Hoje</button>
+                  <button class="pill-tab">7D</button>
+                  <button class="pill-tab">15D</button>
+                  <button class="pill-tab is-active">30D</button>
+                </div>
+              </div>
+              <div class="stats-grid" id="stats-grid"></div>
+            </section>
+
+            <section class="detail-wins">
+              <div class="section-header">
+                <h2>Grande vitória</h2>
+                <div class="pill-tabs">
+                  <button class="pill-tab">Hoje</button>
+                  <button class="pill-tab">3 dias</button>
+                  <button class="pill-tab is-active">7 dias</button>
+                </div>
+              </div>
+              <div class="wins-grid" id="wins-grid"></div>
+            </section>
+
+            <section class="shelf-section">
+              <div class="section-header">
+                <h2 id="related-title">Mais jogos</h2>
+                <button class="outline-button compact">Ver todos</button>
+              </div>
+              <div class="game-row" id="related-row"></div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="floating-banner">
+      <div class="floating-banner-copy">
+        <strong>Instale o Cassino.Bet.Br grátis</strong>
+        <span>Receba promoções exclusivas no mockup.</span>
+      </div>
+      <button class="primary-button compact">Baixar</button>
+    </div>
+
+    <div class="fab-gift">🎁</div>
+
+    <div class="modal-backdrop hidden" id="auth-modal">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div>
+            <p class="eyebrow" id="auth-eyebrow">Conta</p>
+            <h3 id="auth-title">Entrar</h3>
+          </div>
+          <button class="icon-button" id="close-auth-button">✕</button>
+        </div>
+
+        <form id="auth-form" class="auth-form">
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" placeholder="jogador@cassino.com" required />
+          </label>
+          <label>
+            <span>Senha</span>
+            <input type="password" name="password" placeholder="senha123" required />
+          </label>
+          <label id="name-field" class="hidden">
+            <span>Nome</span>
+            <input type="text" name="name" placeholder="Seu nome" />
+          </label>
+          <button type="submit" class="primary-button" id="auth-submit">Continuar</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
