@@ -44,8 +44,7 @@
                 placeholder="Buscar jogos, provedores, tags..."
               />
             </label>
-            <button class="outline-button" data-open-auth="login">Entrar</button>
-            <button class="primary-button" data-open-auth="signup">Cadastrar</button>
+            <div class="session-actions" id="session-actions"></div>
           </div>
         </header>
 
@@ -59,21 +58,33 @@
                 <h2>Mais jogados da semana</h2>
                 <button class="outline-button compact">Ver todos</button>
               </div>
-              <div class="game-row" id="popular-row"></div>
+              <div class="shelf-carousel">
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="popular" aria-label="Anterior">‹</button>
+                <div class="game-row" id="popular-row" data-shelf-key="popular"></div>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="popular" aria-label="Próximo">›</button>
+              </div>
             </section>
             <section class="shelf-section">
               <div class="section-header">
                 <h2>Jogos Crash</h2>
                 <button class="outline-button compact">Ver todos</button>
               </div>
-              <div class="game-row" id="crash-row"></div>
+              <div class="shelf-carousel">
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="crash" aria-label="Anterior">‹</button>
+                <div class="game-row" id="crash-row" data-shelf-key="crash"></div>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="crash" aria-label="Próximo">›</button>
+              </div>
             </section>
             <section class="shelf-section">
               <div class="section-header">
                 <h2>Jogos de Slots</h2>
                 <button class="outline-button compact">Ver todos</button>
               </div>
-              <div class="game-row" id="slots-row"></div>
+              <div class="shelf-carousel">
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="slots" aria-label="Anterior">‹</button>
+                <div class="game-row" id="slots-row" data-shelf-key="slots"></div>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="slots" aria-label="Próximo">›</button>
+              </div>
             </section>
           </section>
 
@@ -118,47 +129,95 @@
                 <h2 id="related-title">Mais jogos</h2>
                 <button class="outline-button compact">Ver todos</button>
               </div>
-              <div class="game-row" id="related-row"></div>
+              <div class="shelf-carousel">
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="related" aria-label="Anterior">‹</button>
+                <div class="game-row" id="related-row" data-shelf-key="related"></div>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="related" aria-label="Próximo">›</button>
+              </div>
             </section>
           </section>
         </main>
       </div>
     </div>
 
-    <div class="floating-banner">
-      <div class="floating-banner-copy">
-        <strong>Instale o Cassino.Bet.Br grátis</strong>
-        <span>Receba promoções exclusivas no mockup.</span>
-      </div>
-      <button class="primary-button compact">Baixar</button>
-    </div>
-
-    <div class="fab-gift">🎁</div>
-
-    <div class="modal-backdrop hidden" id="auth-modal">
-      <div class="auth-card">
+    <div class="modal-backdrop hidden" id="login-modal">
+      <div class="auth-card login-card">
         <div class="auth-header">
           <div>
-            <p class="eyebrow" id="auth-eyebrow">Conta</p>
-            <h3 id="auth-title">Entrar</h3>
+            <p class="eyebrow">Acesso Demo</p>
+            <h3>Entrar</h3>
           </div>
-          <button class="icon-button" id="close-auth-button">✕</button>
+          <button class="icon-button" id="close-login-button">✕</button>
         </div>
 
-        <form id="auth-form" class="auth-form">
+        <form id="login-form" class="auth-form">
+          <div class="login-tip">
+            <strong>Use as credenciais fictícias do mock</strong>
+            <span id="login-credentials-hint"></span>
+          </div>
           <label>
             <span>E-mail</span>
-            <input type="email" name="email" placeholder="jogador@cassino.com" required />
+            <input
+              type="email"
+              name="email"
+              id="login-email"
+              placeholder="demo@pulsebet.com"
+              required
+            />
           </label>
           <label>
             <span>Senha</span>
-            <input type="password" name="password" placeholder="senha123" required />
+            <input
+              type="password"
+              name="password"
+              id="login-password"
+              placeholder="demo123"
+              required
+            />
           </label>
-          <label id="name-field" class="hidden">
-            <span>Nome</span>
-            <input type="text" name="name" placeholder="Seu nome" />
+          <button type="submit" class="primary-button" id="login-submit">Entrar no demo</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="play-modal">
+      <div class="auth-card play-card">
+        <div class="auth-header">
+          <div>
+            <p class="eyebrow">Modo Demo</p>
+            <h3 id="play-title">Definir aposta</h3>
+          </div>
+          <button class="icon-button" id="close-play-button">✕</button>
+        </div>
+
+        <form id="play-form" class="auth-form">
+          <div class="play-game-summary">
+            <strong id="play-game-name"></strong>
+            <span id="play-game-meta"></span>
+          </div>
+          <div class="mini-stat-block">
+            <small>Saldo disponível</small>
+            <strong id="play-balance"></strong>
+          </div>
+          <label>
+            <span>Quanto deseja colocar no jogo?</span>
+            <input
+              type="number"
+              name="amount"
+              id="play-amount"
+              min="1"
+              step="0.01"
+              placeholder="10,00"
+              required
+            />
           </label>
-          <button type="submit" class="primary-button" id="auth-submit">Continuar</button>
+          <div class="quick-amounts">
+            <button type="button" class="outline-button compact" data-quick-amount="10">R$ 10</button>
+            <button type="button" class="outline-button compact" data-quick-amount="25">R$ 25</button>
+            <button type="button" class="outline-button compact" data-quick-amount="50">R$ 50</button>
+            <button type="button" class="outline-button compact" data-quick-amount="100">R$ 100</button>
+          </div>
+          <button type="submit" class="primary-button" id="play-submit">Jogar agora</button>
         </form>
       </div>
     </div>
