@@ -3,6 +3,39 @@ const STORAGE_KEYS = {
   selectedGame: "pulse-casino:selected-game",
 };
 
+const ART_ASSETS = {
+  cards: [
+    "./assets/generated/slot-rabbit-cover.png",
+    "./assets/generated/crash-cover.png",
+    "./assets/generated/live-cover.png",
+    "./assets/generated/card-cover-01.svg",
+    "./assets/generated/card-cover-02.svg",
+    "./assets/generated/card-cover-03.svg",
+    "./assets/generated/card-cover-04.svg",
+    "./assets/generated/card-cover-05.svg",
+    "./assets/generated/card-cover-06.svg",
+    "./assets/generated/card-cover-07.svg",
+    "./assets/generated/card-cover-08.svg",
+    "./assets/generated/card-cover-09.svg",
+    "./assets/generated/card-cover-10.svg",
+  ],
+  game: {
+    slot: "./assets/generated/slot-rabbit-cover.png",
+    crash: "./assets/generated/crash-cover.png",
+    live: "./assets/generated/live-cover.png",
+  },
+  hero: [
+    "./assets/generated/casino-hero-generated.png",
+    "./assets/casino-hero.png",
+    "./assets/sports-hero.png",
+  ],
+  promo: [
+    "./assets/generated/promo-bonus-generated.png",
+    "./assets/generated/casino-hero-generated.png",
+    "./assets/generated/live-cover.png",
+  ],
+};
+
 const EXTRA_GAMES = [
   createGame({
     id: "gates-of-olympus",
@@ -246,6 +279,7 @@ const state = {
     slots: 0,
     related: 0,
   },
+  gameSession: null,
 };
 
 const elements = {
@@ -263,6 +297,7 @@ const elements = {
   relatedRow: document.querySelector("#related-row"),
   relatedTitle: document.querySelector("#related-title"),
   detailHero: document.querySelector("#detail-hero"),
+  detailGameStage: document.querySelector("#detail-game-stage"),
   detailModalCard: document.querySelector("#detail-modal-card"),
   detailTitleBar: document.querySelector("#detail-title-bar"),
   searchInput: document.querySelector("#search-input"),
@@ -386,6 +421,11 @@ function handleDocumentClick(event) {
     const direction = shelfTrigger.dataset.shelfNav === "next" ? 1 : -1;
     shiftShelf(shelfKey, direction);
   }
+
+  const spinTrigger = event.target.closest("[data-slot-spin]");
+  if (spinTrigger) {
+    runSlotSpin();
+  }
 }
 
 function renderAll() {
@@ -487,7 +527,7 @@ function renderJackpots() {
       (item) => `
         <article class="jackpot-card tone-${item.tone}">
           <div class="jackpot-rank">${item.rank}</div>
-          <div class="jackpot-thumb"></div>
+          <div class="jackpot-thumb" style="${getArtVariableStyle(getGameArtworkById(item.gameId, "card"))}"></div>
           <div class="jackpot-copy">
             <strong>${item.name}</strong>
             <span>${item.amount}</span>
@@ -508,8 +548,9 @@ function renderPromoHero() {
     <div class="hero-banner-grid">
       ${state.data.heroBanners
         .map(
-          (banner) => `
+          (banner, index) => `
             <article class="hero-banner tone-${banner.tone}">
+              <div class="hero-banner-art" style="${getArtVariableStyle(getHeroBannerArtwork(index))}"></div>
               <div class="hero-banner-content">
                 <span>${banner.badge}</span>
                 <strong>${banner.title}</strong>
@@ -524,8 +565,9 @@ function renderPromoHero() {
     <div class="side-promo-column">
       ${state.data.sideBanners
         .map(
-          (banner) => `
+          (banner, index) => `
             <article class="side-promo-card">
+              <div class="side-promo-art" style="${getArtVariableStyle(getPromoArtwork(index))}"></div>
               <div>
                 <span>${banner.badge}</span>
                 <strong>${banner.title}</strong>
@@ -557,7 +599,7 @@ function renderGameRow(container, games, shelfKey) {
     .map(
       (game) => `
         <article class="game-tile tone-${game.tone}">
-          <div class="game-tile-cover">
+          <div class="game-tile-cover" style="${getArtVariableStyle(getGameArtwork(game, "card"))}">
             <div class="game-badge">${game.badge}</div>
             <div class="viewer-pill">${game.online}</div>
           </div>
@@ -587,12 +629,15 @@ function renderDetail() {
     return;
   }
 
+  const session = getGameSessionForSelectedGame();
   elements.detailHero.className = `detail-hero tone-${game.tone}`;
+  renderGameStage(game);
   elements.detailModalCard.innerHTML = `
-    <div class="detail-cover tone-${game.tone}">
-      <span>${game.badge}</span>
-    </div>
     <div class="detail-modal-copy">
+      <div class="detail-card-topline">
+        <span class="detail-chip">${game.badge} online</span>
+        <span class="detail-chip">RTP ${game.rtp}</span>
+      </div>
       <h3>${game.name}</h3>
       <p>${game.provider}</p>
       <div class="detail-socials">
@@ -613,10 +658,21 @@ function renderDetail() {
       <div class="detail-actions">
         ${
           state.user
-            ? `
+            ? session
+              ? `
+              <button class="primary-button" data-slot-spin="true" ${
+                canSpinCurrentGame() ? "" : "disabled"
+              }>
+                ${getSpinButtonLabel()}
+              </button>
+              <button class="outline-button large-outline detail-balance-button" disabled>
+                Saldo ${formatCurrencyBRL(state.user.balance ?? 0)}
+              </button>
+            `
+              : `
               <button class="primary-button" data-play-selected="true">Jogar agora</button>
               <button class="outline-button large-outline detail-balance-button" disabled>
-                Saldo ${formatCurrencyBRL(state.user.balance)}
+                Saldo ${formatCurrencyBRL(state.user.balance ?? 0)}
               </button>
             `
             : `
@@ -737,8 +793,10 @@ function loginDemoUser(silent = false) {
 }
 
 function logoutDemoUser() {
+  window.clearTimeout(runSlotSpin.timeoutId);
   state.user = null;
   state.loginTargetGameId = null;
+  state.gameSession = null;
   clearStorage(STORAGE_KEYS.user);
   renderSessionActions();
   renderDetail();
@@ -828,6 +886,7 @@ function handlePlaySubmit(event) {
 
   state.user.balance = Number((state.user.balance - amount).toFixed(2));
   saveStorage(STORAGE_KEYS.user, state.user);
+  state.gameSession = createGameSession(game, amount);
   state.currentView = "detail";
   renderSessionActions();
   renderDetail();
@@ -847,6 +906,87 @@ function handleViewportChange() {
   if (state.currentView === "detail") {
     renderDetail();
   }
+}
+
+function renderGameStage(game) {
+  const session = getGameSessionForSelectedGame();
+  if (!session) {
+    elements.detailGameStage.innerHTML = `
+      <div class="slot-shell slot-shell-empty tone-${game.tone}">
+        <div class="slot-empty-state">
+          <strong>${game.name}</strong>
+          <span>Defina uma aposta para abrir o mock do jogo.</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const winLabel = session.lastWin > 0 ? formatCurrencyBRL(session.lastWin) : "R$ 0,00";
+  const isSpinning = session.spinState === "spinning";
+  const isWinning = session.spinState === "settled" && session.lastWin > 0;
+
+  elements.detailGameStage.innerHTML = `
+    <div class="slot-shell tone-${game.tone} ${isWinning ? "is-winning" : ""}">
+      <div class="slot-marquee">
+        <span>Modo demo</span>
+        <strong>${game.name}</strong>
+        <em>${session.message}</em>
+      </div>
+      <div class="slot-machine" style="${getArtVariableStyle(getGameArtwork(game, "detail"))}">
+        <div class="slot-topper">
+          <div class="slot-topper-badge">Caminho certo</div>
+          <div class="slot-topper-brand">${game.provider}</div>
+        </div>
+        <div class="slot-board ${isSpinning ? "is-spinning" : ""}">
+          ${session.reels
+            .map(
+              (reel, reelIndex) => `
+                <div class="slot-reel">
+                  <div class="slot-strip ${isSpinning ? `spin-delay-${reelIndex}` : ""}">
+                    ${reel
+                      .map(
+                        (symbol) => `
+                          <div class="slot-symbol slot-symbol-${symbol.tone}">
+                            <span>${symbol.icon}</span>
+                            <small>${symbol.label}</small>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              `
+            )
+            .join("")}
+          <div class="slot-win-line"></div>
+        </div>
+        <div class="slot-results">
+          <span>Ganho</span>
+          <strong>${winLabel}</strong>
+        </div>
+        <div class="slot-hud">
+          <div class="slot-hud-card">
+            <small>Saldo</small>
+            <strong>${formatCurrencyBRL(state.user?.balance ?? 0)}</strong>
+          </div>
+          <div class="slot-hud-card">
+            <small>Aposta</small>
+            <strong>${formatCurrencyBRL(session.betAmount)}</strong>
+          </div>
+          <div class="slot-hud-card">
+            <small>Último prêmio</small>
+            <strong>${winLabel}</strong>
+          </div>
+          <button class="slot-spin-button" data-slot-spin="true" ${
+            canSpinCurrentGame() ? "" : "disabled"
+          }>
+            ${getSpinButtonLabel()}
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function getVisibleGameCount() {
@@ -879,6 +1019,48 @@ function shiftShelf(shelfKey, direction) {
   }
 
   renderShelves();
+}
+
+function runSlotSpin() {
+  const game = getSelectedGame();
+  const session = getGameSessionForSelectedGame();
+  if (!game || !session || !state.user || session.spinState === "spinning") {
+    return;
+  }
+
+  if (!session.hasActiveBet) {
+    if (state.user.balance < session.betAmount) {
+      showToast("Saldo demo insuficiente para girar novamente.");
+      return;
+    }
+    state.user.balance = Number((state.user.balance - session.betAmount).toFixed(2));
+    saveStorage(STORAGE_KEYS.user, state.user);
+    renderSessionActions();
+  }
+
+  session.spinState = "spinning";
+  session.message = "Girando...";
+  session.lastWin = 0;
+  session.hasActiveBet = false;
+  session.reels = createSpinningReels();
+  renderDetail();
+
+  window.clearTimeout(runSlotSpin.timeoutId);
+  runSlotSpin.timeoutId = window.setTimeout(() => {
+    if (!state.user || !getGameSessionForSelectedGame()) {
+      return;
+    }
+    const payout = Number((session.betAmount * session.payoutMultiplier).toFixed(2));
+    state.user.balance = Number((state.user.balance + payout).toFixed(2));
+    saveStorage(STORAGE_KEYS.user, state.user);
+    session.spinState = "settled";
+    session.lastWin = payout;
+    session.message = `Você acertou ${session.payoutMultiplier}x na linha central.`;
+    session.reels = createWinningReels(game);
+    renderSessionActions();
+    renderDetail();
+    showToast(`${game.name} pagou ${formatCurrencyBRL(payout)}.`);
+  }, 2100);
 }
 
 function getShelfGames(shelfKey) {
@@ -950,6 +1132,182 @@ function normalizeStoredUser(user) {
     email: user.email ?? fallback.email ?? "demo@pulsebet.com",
     balance: Number.isFinite(balance) ? balance : 1000,
   };
+}
+
+function createGameSession(game, betAmount) {
+  return {
+    activeGameId: game.id,
+    betAmount,
+    spinState: "idle",
+    lastWin: 0,
+    payoutMultiplier: 5,
+    hasActiveBet: true,
+    message: "Aposta pronta. Clique em girar para rodar o slot.",
+    reels: createIdleReels(game),
+  };
+}
+
+function getGameSessionForSelectedGame() {
+  if (!state.gameSession) {
+    return null;
+  }
+
+  if (state.gameSession.activeGameId !== state.selectedGameId) {
+    return null;
+  }
+
+  return state.gameSession;
+}
+
+function canSpinCurrentGame() {
+  const session = getGameSessionForSelectedGame();
+  return Boolean(session && session.spinState !== "spinning");
+}
+
+function getSpinButtonLabel() {
+  const session = getGameSessionForSelectedGame();
+  if (!session) {
+    return "Abrir jogo";
+  }
+
+  if (session.spinState === "spinning") {
+    return "Girando...";
+  }
+
+  if (session.lastWin > 0) {
+    return "Girar novamente";
+  }
+
+  return "Girar";
+}
+
+function createIdleReels(game) {
+  return [
+    [
+      createSymbol("scroll"),
+      createSymbol("coin"),
+      createSymbol("wild", game),
+    ],
+    [
+      createSymbol("fortune"),
+      createSymbol("coin"),
+      createSymbol("orange"),
+    ],
+    [
+      createSymbol("orange"),
+      createSymbol("red-envelope"),
+      createSymbol("wild", game),
+    ],
+  ];
+}
+
+function createWinningReels(game) {
+  return [
+    [
+      createSymbol("scroll"),
+      createSymbol("fortune"),
+      createSymbol("wild", game),
+    ],
+    [
+      createSymbol("coin"),
+      createSymbol("fortune"),
+      createSymbol("orange"),
+    ],
+    [
+      createSymbol("orange"),
+      createSymbol("fortune"),
+      createSymbol("red-envelope"),
+    ],
+  ];
+}
+
+function createSpinningReels() {
+  return [
+    [
+      createSymbol("scroll"),
+      createSymbol("orange"),
+      createSymbol("fortune"),
+      createSymbol("wild"),
+      createSymbol("coin"),
+      createSymbol("red-envelope"),
+    ],
+    [
+      createSymbol("orange"),
+      createSymbol("coin"),
+      createSymbol("fortune"),
+      createSymbol("scroll"),
+      createSymbol("wild"),
+      createSymbol("orange"),
+    ],
+    [
+      createSymbol("wild"),
+      createSymbol("red-envelope"),
+      createSymbol("fortune"),
+      createSymbol("coin"),
+      createSymbol("orange"),
+      createSymbol("scroll"),
+    ],
+  ];
+}
+
+function createSymbol(type, game = null) {
+  const map = {
+    orange: { icon: "🍊", label: "laranja", tone: "amber" },
+    scroll: { icon: "🧨", label: "pergaminho", tone: "red" },
+    coin: { icon: "🪙", label: "moeda", tone: "gold" },
+    "red-envelope": { icon: "🧧", label: "selo", tone: "red" },
+    fortune: { icon: "💚", label: "fortuna", tone: "emerald" },
+    wild: {
+      icon: "🐯",
+      label: game?.name?.split(" ")[1]?.toLowerCase() || "wild",
+      tone: game?.tone || "purple",
+    },
+  };
+
+  return map[type];
+}
+
+function getArtVariableStyle(src) {
+  return `--art-image: url('${src}')`;
+}
+
+function getGameArtwork(game, variant = "card") {
+  if (variant === "card") {
+    return getCardArtwork(game.id);
+  }
+
+  if (game.tags.includes("crash") || game.section === "crash") {
+    return ART_ASSETS.game.crash;
+  }
+
+  if (game.tags.includes("live") || game.provider === "Evolution") {
+    return ART_ASSETS.game.live;
+  }
+
+  return ART_ASSETS.game.slot;
+}
+
+function getGameArtworkById(gameId, variant = "card") {
+  const game = state.data?.games.find((item) => item.id === gameId);
+  return game ? getGameArtwork(game, variant) : ART_ASSETS.cards[0];
+}
+
+function getCardArtwork(gameId) {
+  const gameIndex = state.data?.games.findIndex((item) => item.id === gameId) ?? -1;
+  if (gameIndex >= 0) {
+    return ART_ASSETS.cards[gameIndex % ART_ASSETS.cards.length];
+  }
+
+  const hash = gameId.split("").reduce((total, char, index) => total + char.charCodeAt(0) * (index + 1), 0);
+  return ART_ASSETS.cards[hash % ART_ASSETS.cards.length];
+}
+
+function getHeroBannerArtwork(index) {
+  return ART_ASSETS.hero[index % ART_ASSETS.hero.length];
+}
+
+function getPromoArtwork(index) {
+  return ART_ASSETS.promo[index % ART_ASSETS.promo.length];
 }
 
 function showToast(message) {
