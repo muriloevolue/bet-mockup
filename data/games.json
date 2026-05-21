@@ -44,7 +44,7 @@
   "heroBanners": [
     { "badge": "New games", "title": "New Games", "subtitle": "Now available in the casino", "cta": "Play now!", "tone": "blue" },
     { "badge": "Auto Mega Roulette", "title": "Up to 500x", "subtitle": "Featured multipliers", "cta": "Enjoy now!", "tone": "purple" },
-    { "badge": "Tournament", "title": "R$ 50 mil", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red" }
+    { "badge": "Tournament", "title": "R$ 50k", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red" }
   ],
   "sideBanners": [
     { "badge": "Download our", "title": "Casino App!", "cta": "Download" },
