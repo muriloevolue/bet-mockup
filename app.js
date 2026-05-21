@@ -46,7 +46,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 18.447.993,12",
     lastMinutes: "R$ 133.221,49",
     rtp: "96,50%",
-    family: "Slots mitológicos",
+    family: "Mythology slots",
     likes: "27980",
     dislikes: "6122",
     tone: "blue",
@@ -71,7 +71,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 12.905.318,55",
     lastMinutes: "R$ 81.544,90",
     rtp: "96,51%",
-    family: "Slots doces",
+    family: "Candy slots",
     likes: "19840",
     dislikes: "4770",
     tone: "red",
@@ -96,7 +96,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 6.442.190,63",
     lastMinutes: "R$ 44.208,17",
     rtp: "96,54%",
-    family: "Slots em arena",
+    family: "Arena slots",
     likes: "12118",
     dislikes: "2592",
     tone: "gold",
@@ -121,7 +121,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 4.881.320,91",
     lastMinutes: "R$ 32.510,42",
     rtp: "96,58%",
-    family: "Batalha de deuses",
+    family: "Battle of the gods",
     likes: "9930",
     dislikes: "2204",
     tone: "blue",
@@ -146,7 +146,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 8.110.437,00",
     lastMinutes: "R$ 51.006,04",
     rtp: "96,50%",
-    family: "Grid de doces",
+    family: "Candy grid",
     likes: "13920",
     dislikes: "2911",
     tone: "purple",
@@ -221,7 +221,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 1.220.514,78",
     lastMinutes: "R$ 17.220,09",
     rtp: "97,10%",
-    family: "Crash casual",
+    family: "Casual crash",
     likes: "7140",
     dislikes: "1551",
     tone: "blue",
@@ -246,7 +246,7 @@ const EXTRA_GAMES = [
     todayPayout: "R$ 932.004,18",
     lastMinutes: "R$ 10.489,40",
     rtp: "96,90%",
-    family: "Drop e multiplicadores",
+    family: "Drops and multipliers",
     likes: "5410",
     dislikes: "1212",
     tone: "green",
@@ -402,7 +402,7 @@ function handleDocumentClick(event) {
   const playTrigger = event.target.closest("[data-play-selected], [data-play-game-id]");
   if (playTrigger) {
     if (!state.user) {
-      showToast("Entre no modo demo para jogar.");
+      showToast("Enter demo mode to play.");
       return;
     }
 
@@ -442,25 +442,25 @@ function renderAll() {
 function renderSessionActions() {
   if (!state.user) {
     elements.sessionActions.innerHTML = `
-      <span class="session-hint">Acesse com e-mail e senha demo</span>
-      <button class="outline-button" data-session-action="login">Entrar</button>
+      <span class="session-hint">Use the demo email and password</span>
+      <button class="outline-button" data-session-action="login">Sign in</button>
     `;
     return;
   }
 
   elements.sessionActions.innerHTML = `
     <div class="balance-chip">
-      <span>Saldo demo</span>
+      <span>Demo balance</span>
       <strong>${formatCurrencyBRL(state.user.balance)}</strong>
     </div>
     <div class="user-chip">
       <span class="user-avatar">${state.user.name.charAt(0).toUpperCase()}</span>
       <div class="user-meta">
         <strong>${state.user.name}</strong>
-        <small>Usuario ficticio</small>
+        <small>Mock user</small>
       </div>
     </div>
-    <button class="outline-button" data-session-action="logout">Sair</button>
+    <button class="outline-button" data-session-action="logout">Sign out</button>
   `;
 }
 
@@ -505,7 +505,7 @@ function renderSidebar() {
 function renderTicker() {
   elements.tickerRow.innerHTML = `
     <article class="ticker-card highlight-card">
-      <span>Top ganhos</span>
+      <span>Top wins</span>
     </article>
     ${state.data.ticker
       .map(
@@ -533,7 +533,7 @@ function renderJackpots() {
             <span>${item.amount}</span>
           </div>
           <button class="outline-button compact small-button" data-game-id="${item.gameId}">
-            Jogar
+            Play
           </button>
         </article>
       `
@@ -607,11 +607,11 @@ function renderGameRow(container, games, shelfKey) {
             <strong>${game.name}</strong>
             <span>${game.provider}</span>
             <div class="payout-line">
-              <small>Pagou hoje</small>
+              <small>Paid today</small>
               <em>${game.todayPayout}</em>
             </div>
             <button class="outline-button compact small-button" data-game-id="${game.id}">
-              Jogar
+              Play
             </button>
           </div>
         </article>
@@ -648,11 +648,11 @@ function renderDetail() {
         <span>⧉</span>
       </div>
       <div class="mini-stat-block">
-        <small>Pagou hoje</small>
+        <small>Paid today</small>
         <strong>${game.todayPayout}</strong>
       </div>
       <div class="mini-stat-block">
-        <small>Ultimos minutos</small>
+        <small>Last few minutes</small>
         <strong>${game.lastMinutes}</strong>
       </div>
       <div class="detail-actions">
@@ -666,18 +666,18 @@ function renderDetail() {
                 ${getSpinButtonLabel()}
               </button>
               <button class="outline-button large-outline detail-balance-button" disabled>
-                Saldo ${formatCurrencyBRL(state.user.balance ?? 0)}
+                Balance ${formatCurrencyBRL(state.user.balance ?? 0)}
               </button>
             `
               : `
-              <button class="primary-button" data-play-selected="true">Jogar agora</button>
+              <button class="primary-button" data-play-selected="true">Play now</button>
               <button class="outline-button large-outline detail-balance-button" disabled>
-                Saldo ${formatCurrencyBRL(state.user.balance ?? 0)}
+                Balance ${formatCurrencyBRL(state.user.balance ?? 0)}
               </button>
             `
             : `
-              <button class="primary-button" data-login-play="selected">Entrar e jogar</button>
-              <button class="outline-button large-outline detail-balance-button" disabled>Sem cadastro real</button>
+              <button class="primary-button" data-login-play="selected">Sign in and play</button>
+              <button class="outline-button large-outline detail-balance-button" disabled>No real signup</button>
             `
         }
       </div>
@@ -717,15 +717,15 @@ function renderDetail() {
             <span>${index + 1}</span>
             <strong>${win.player}</strong>
           </div>
-          <div class="win-line"><span>Pagamento</span><strong>${win.payout}</strong></div>
-          <div class="win-line"><span>Aposta</span><strong>${win.bet}</strong></div>
-          <div class="win-line"><span>Multiplicador</span><strong>${win.multiplier}</strong></div>
+          <div class="win-line"><span>Payout</span><strong>${win.payout}</strong></div>
+          <div class="win-line"><span>Bet</span><strong>${win.bet}</strong></div>
+          <div class="win-line"><span>Multiplier</span><strong>${win.multiplier}</strong></div>
         </article>
       `
     )
     .join("");
 
-  elements.relatedTitle.textContent = `Mais jogos de ${game.provider}`;
+  elements.relatedTitle.textContent = `More games from ${game.provider}`;
   renderGameRow(
     elements.relatedRow,
     state.data.games.filter((item) => item.provider === game.provider && item.id !== game.id),
@@ -788,7 +788,7 @@ function loginDemoUser(silent = false) {
   closeSidebarOnMobile();
   closeLoginModal(true);
   if (!silent) {
-    showToast("Login demo ativado.");
+    showToast("Demo login enabled.");
   }
 }
 
@@ -802,7 +802,7 @@ function logoutDemoUser() {
   renderDetail();
   closeLoginModal();
   closePlayModal();
-  showToast("Sessao demo encerrada.");
+  showToast("Demo session ended.");
 }
 
 function openLoginModal(targetGameId = null) {
@@ -828,7 +828,7 @@ function openPlayModal(gameId) {
 
   state.selectedGameId = game.id;
   saveStorage(STORAGE_KEYS.selectedGame, state.selectedGameId);
-  elements.playTitle.textContent = `Jogar ${game.name}`;
+  elements.playTitle.textContent = `Play ${game.name}`;
   elements.playGameName.textContent = game.name;
   elements.playGameMeta.textContent = `${game.provider} · RTP ${game.rtp}`;
   elements.playBalance.textContent = formatCurrencyBRL(state.user.balance);
@@ -848,7 +848,7 @@ function handleLoginSubmit(event) {
   const expectedPassword = String(state.fakeUserTemplate.password);
 
   if (email !== expectedEmail || password !== expectedPassword) {
-    showToast("Use as credenciais demo exibidas no modal.");
+    showToast("Use the demo credentials shown in the modal.");
     return;
   }
 
@@ -857,17 +857,17 @@ function handleLoginSubmit(event) {
   if (state.loginTargetGameId) {
     openPlayModal(state.loginTargetGameId);
     state.loginTargetGameId = null;
-    showToast("Login demo ativado. Defina o valor para jogar.");
+    showToast("Demo login enabled. Set the amount to play.");
     return;
   }
 
-  showToast("Login demo ativado.");
+  showToast("Demo login enabled.");
 }
 
 function handlePlaySubmit(event) {
   event.preventDefault();
   if (!state.user) {
-    showToast("Entre no modo demo para jogar.");
+    showToast("Enter demo mode to play.");
     return;
   }
 
@@ -875,12 +875,12 @@ function handlePlaySubmit(event) {
   const amount = Number(elements.playAmount.value);
 
   if (!Number.isFinite(amount) || amount <= 0) {
-    showToast("Informe um valor de aposta valido.");
+    showToast("Enter a valid bet amount.");
     return;
   }
 
   if (amount > state.user.balance) {
-    showToast("Saldo demo insuficiente para essa jogada.");
+    showToast("Insufficient demo balance for this play.");
     return;
   }
 
@@ -893,7 +893,7 @@ function handlePlaySubmit(event) {
   renderViews();
   closePlayModal();
   window.scrollTo({ top: 0, behavior: "smooth" });
-  showToast(`${game.name} iniciado com ${formatCurrencyBRL(amount)}.`);
+  showToast(`${game.name} started with ${formatCurrencyBRL(amount)}.`);
 }
 
 function closeSidebarOnMobile() {
@@ -915,7 +915,7 @@ function renderGameStage(game) {
       <div class="slot-shell slot-shell-empty tone-${game.tone}">
         <div class="slot-empty-state">
           <strong>${game.name}</strong>
-          <span>Defina uma aposta para abrir o mock do jogo.</span>
+          <span>Set a bet to open the game mock.</span>
         </div>
       </div>
     `;
@@ -929,13 +929,13 @@ function renderGameStage(game) {
   elements.detailGameStage.innerHTML = `
     <div class="slot-shell tone-${game.tone} ${isWinning ? "is-winning" : ""}">
       <div class="slot-marquee">
-        <span>Modo demo</span>
+        <span>Demo mode</span>
         <strong>${game.name}</strong>
         <em>${session.message}</em>
       </div>
       <div class="slot-machine" style="${getArtVariableStyle(getGameArtwork(game, "detail"))}">
         <div class="slot-topper">
-          <div class="slot-topper-badge">Caminho certo</div>
+          <div class="slot-topper-badge">Hot path</div>
           <div class="slot-topper-brand">${game.provider}</div>
         </div>
         <div class="slot-board ${isSpinning ? "is-spinning" : ""}">
@@ -962,20 +962,20 @@ function renderGameStage(game) {
           <div class="slot-win-line"></div>
         </div>
         <div class="slot-results">
-          <span>Ganho</span>
+          <span>Win</span>
           <strong>${winLabel}</strong>
         </div>
         <div class="slot-hud">
           <div class="slot-hud-card">
-            <small>Saldo</small>
+            <small>Balance</small>
             <strong>${formatCurrencyBRL(state.user?.balance ?? 0)}</strong>
           </div>
           <div class="slot-hud-card">
-            <small>Aposta</small>
+            <small>Bet</small>
             <strong>${formatCurrencyBRL(session.betAmount)}</strong>
           </div>
           <div class="slot-hud-card">
-            <small>Último prêmio</small>
+            <small>Last prize</small>
             <strong>${winLabel}</strong>
           </div>
           <button class="slot-spin-button" data-slot-spin="true" ${
@@ -1030,7 +1030,7 @@ function runSlotSpin() {
 
   if (!session.hasActiveBet) {
     if (state.user.balance < session.betAmount) {
-      showToast("Saldo demo insuficiente para girar novamente.");
+      showToast("Insufficient demo balance to spin again.");
       return;
     }
     state.user.balance = Number((state.user.balance - session.betAmount).toFixed(2));
@@ -1039,7 +1039,7 @@ function runSlotSpin() {
   }
 
   session.spinState = "spinning";
-  session.message = "Girando...";
+  session.message = "Spinning...";
   session.lastWin = 0;
   session.hasActiveBet = false;
   session.reels = createSpinningReels();
@@ -1055,11 +1055,11 @@ function runSlotSpin() {
     saveStorage(STORAGE_KEYS.user, state.user);
     session.spinState = "settled";
     session.lastWin = payout;
-    session.message = `Você acertou ${session.payoutMultiplier}x na linha central.`;
+    session.message = `You hit ${session.payoutMultiplier}x on the center line.`;
     session.reels = createWinningReels(game);
     renderSessionActions();
     renderDetail();
-    showToast(`${game.name} pagou ${formatCurrencyBRL(payout)}.`);
+    showToast(`${game.name} paid ${formatCurrencyBRL(payout)}.`);
   }, 2100);
 }
 
@@ -1128,7 +1128,7 @@ function normalizeStoredUser(user) {
   const balance = Number(user.balance ?? fallback.balance ?? 1000);
   return {
     id: user.id ?? fallback.id ?? "usr-demo",
-    name: user.name ?? fallback.name ?? "Jogador Demo",
+    name: user.name ?? fallback.name ?? "Demo Player",
     email: user.email ?? fallback.email ?? "demo@pulsebet.com",
     balance: Number.isFinite(balance) ? balance : 1000,
   };
@@ -1142,7 +1142,7 @@ function createGameSession(game, betAmount) {
     lastWin: 0,
     payoutMultiplier: 5,
     hasActiveBet: true,
-    message: "Aposta pronta. Clique em girar para rodar o slot.",
+    message: "Bet ready. Click spin to run the slot.",
     reels: createIdleReels(game),
   };
 }
@@ -1167,18 +1167,18 @@ function canSpinCurrentGame() {
 function getSpinButtonLabel() {
   const session = getGameSessionForSelectedGame();
   if (!session) {
-    return "Abrir jogo";
+    return "Open game";
   }
 
   if (session.spinState === "spinning") {
-    return "Girando...";
+    return "Spinning...";
   }
 
   if (session.lastWin > 0) {
-    return "Girar novamente";
+    return "Spin again";
   }
 
-  return "Girar";
+  return "Spin";
 }
 
 function createIdleReels(game) {
@@ -1252,11 +1252,11 @@ function createSpinningReels() {
 
 function createSymbol(type, game = null) {
   const map = {
-    orange: { icon: "🍊", label: "laranja", tone: "amber" },
-    scroll: { icon: "🧨", label: "pergaminho", tone: "red" },
-    coin: { icon: "🪙", label: "moeda", tone: "gold" },
-    "red-envelope": { icon: "🧧", label: "selo", tone: "red" },
-    fortune: { icon: "💚", label: "fortuna", tone: "emerald" },
+    orange: { icon: "🍊", label: "orange", tone: "amber" },
+    scroll: { icon: "🧨", label: "scroll", tone: "red" },
+    coin: { icon: "🪙", label: "coin", tone: "gold" },
+    "red-envelope": { icon: "🧧", label: "seal", tone: "red" },
+    fortune: { icon: "💚", label: "fortune", tone: "emerald" },
     wild: {
       icon: "🐯",
       label: game?.name?.split(" ")[1]?.toLowerCase() || "wild",
@@ -1331,15 +1331,15 @@ function createGame(config) {
   return {
     ...game,
     stats: [
-      { label: "Online agora", value: onlineNow, highlight: true },
-      { label: "Total pago", value: totalPaid },
-      { label: "RTP real", value: rtpReal },
-      { label: "Ganho medio", value: avgWin },
+      { label: "Online now", value: onlineNow, highlight: true },
+      { label: "Total paid", value: totalPaid },
+      { label: "Live RTP", value: rtpReal },
+      { label: "Average win", value: avgWin },
     ],
     bigWins: wins,
   };
 }
 
 bootstrap().catch(() => {
-  showToast("Falha ao carregar o mockup.");
+  showToast("Failed to load the mockup.");
 });

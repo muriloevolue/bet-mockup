@@ -1,35 +1,35 @@
 {
   "sidebarPromos": [
-    { "top": "Jogue e ganhe", "title": "Mini Games Diários", "icon": "🎲" },
-    { "top": "R$ 50,00", "title": "Indique e Ganhe", "icon": "💥" },
-    { "top": "Participe dos", "title": "Torneios", "icon": "🏆" },
-    { "top": "Participe das", "title": "Missões", "icon": "🎯" }
+    { "top": "Play and win", "title": "Daily Mini Games", "icon": "🎲" },
+    { "top": "R$ 50,00", "title": "Refer and Earn", "icon": "💥" },
+    { "top": "Join the", "title": "Tournaments", "icon": "🏆" },
+    { "top": "Join the", "title": "Missions", "icon": "🎯" }
   ],
   "sidebarNav": [
-    { "icon": "◈", "label": "Jogos de Cassino" },
-    { "icon": "▣", "label": "Cassino ao Vivo" },
-    { "icon": "▤", "label": "Jogos Slots" },
-    { "icon": "◎", "label": "Todos os Jogos" },
-    { "icon": "⌘", "label": "Provedores" },
+    { "icon": "◈", "label": "Casino Games" },
+    { "icon": "▣", "label": "Live Casino" },
+    { "icon": "▤", "label": "Slot Games" },
+    { "icon": "◎", "label": "All Games" },
+    { "icon": "⌘", "label": "Providers" },
     { "icon": "◌", "label": "Mines" },
     { "icon": "🐯", "label": "Fortune Tiger" },
     { "icon": "✈", "label": "Aviator" },
-    { "icon": "◍", "label": "Roleta Brasileira" },
+    { "icon": "◍", "label": "Brazilian Roulette" },
     { "icon": "⚽", "label": "Football Studio" },
     { "icon": "◔", "label": "Fortune Fruits" },
     { "icon": "☠", "label": "Fortune Pirates" }
   ],
   "sidebarBottom": [
-    { "icon": "✦", "label": "Promoções" },
-    { "icon": "⊛", "label": "Central de Ajuda" },
-    { "icon": "◗", "label": "Suporte ao Vivo" },
-    { "icon": "🎁", "label": "Indicar um amigo" },
+    { "icon": "✦", "label": "Promotions" },
+    { "icon": "⊛", "label": "Help Center" },
+    { "icon": "◗", "label": "Live Support" },
+    { "icon": "🎁", "label": "Refer a friend" },
     { "icon": "➤", "label": "Telegram" },
-    { "icon": "⇩", "label": "Baixar App" }
+    { "icon": "⇩", "label": "Download App" }
   ],
   "ticker": [
     { "player": "MAYLAN SO**", "game": "LUCKY'S WILD PUB", "amount": "R$ 32.840,00" },
-    { "player": "WESLEY RO**", "game": "CASSINO AUTO ME...", "amount": "R$ 16.000,00" },
+    { "player": "WESLEY RO**", "game": "CASINO AUTO ME...", "amount": "R$ 16.000,00" },
     { "player": "DANIEL CR**", "game": "GATES OF OLYMP...", "amount": "R$ 12.650,00" },
     { "player": "NATALIA MA**", "game": "SANTA'S GREAT GI...", "amount": "R$ 10.750,00" },
     { "player": "GUILHERME BA**", "game": "ARABIC ROULETTE", "amount": "R$ 9.216,00" }
@@ -42,14 +42,14 @@
     { "rank": 9, "name": "Bac Bo", "amount": "R$ 2.272.854,50", "tone": "green", "gameId": "bac-bo" }
   ],
   "heroBanners": [
-    { "badge": "Novos jogos", "title": "Novos Jogos", "subtitle": "Já estão disponíveis no cassino", "cta": "Jogue agora!", "tone": "blue" },
-    { "badge": "Auto Mega Roulette", "title": "Até 500x", "subtitle": "Multiplicadores em destaque", "cta": "Aproveite agora!", "tone": "purple" },
-    { "badge": "Torneio", "title": "R$ 50 mil", "subtitle": "Em prêmios no lobby", "cta": "Acesse agora!", "tone": "red" }
+    { "badge": "New games", "title": "New Games", "subtitle": "Now available in the casino", "cta": "Play now!", "tone": "blue" },
+    { "badge": "Auto Mega Roulette", "title": "Up to 500x", "subtitle": "Featured multipliers", "cta": "Enjoy now!", "tone": "purple" },
+    { "badge": "Tournament", "title": "R$ 50 mil", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red" }
   ],
   "sideBanners": [
-    { "badge": "Baixe o nosso", "title": "App Cassino!", "cta": "Baixar" },
-    { "badge": "Até 25% de", "title": "Cashback!", "cta": "Resgatar" },
-    { "badge": "Plataforma", "title": "Regulamentada", "cta": "Saber mais" }
+    { "badge": "Download our", "title": "Casino App!", "cta": "Download" },
+    { "badge": "Up to 25%", "title": "Cashback!", "cta": "Claim" },
+    { "badge": "Platform", "title": "Regulated", "cta": "Learn more" }
   ],
   "games": [
     {
@@ -61,21 +61,21 @@
       "todayPayout": "R$ 8.395.647,89",
       "lastMinutes": "R$ 252.778,06",
       "rtp": "96,75%",
-      "family": "Mesma família do Fortune Tiger",
+      "family": "Same family as Fortune Tiger",
       "likes": "31850",
       "dislikes": "17595",
       "tone": "purple",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
       "stats": [
-        { "label": "Online agora", "value": "1.090", "highlight": true },
-        { "label": "Total pago", "value": "R$ 331.741.767,98" },
-        { "label": "RTP real", "value": "96,31%" },
-        { "label": "Ganho médio", "value": "R$ 2,34" },
-        { "label": "Jogadores", "value": "369.096" },
-        { "label": "Total apostas", "value": "344.467.390,3" },
-        { "label": "Edge da casa", "value": "4,00%" },
-        { "label": "Apostas/hora", "value": "-" }
+        { "label": "Online now", "value": "1.090", "highlight": true },
+        { "label": "Total paid", "value": "R$ 331.741.767,98" },
+        { "label": "Live RTP", "value": "96,31%" },
+        { "label": "Average win", "value": "R$ 2,34" },
+        { "label": "Players", "value": "369.096" },
+        { "label": "Total bets", "value": "344.467.390,3" },
+        { "label": "House edge", "value": "4,00%" },
+        { "label": "Bets/hour", "value": "-" }
       ],
       "bigWins": [
         { "player": "ri**", "payout": "R$ 2.807,50", "bet": "R$ 5,00", "multiplier": "561.5x" },
@@ -95,17 +95,17 @@
       "todayPayout": "R$ 7.251.729,62",
       "lastMinutes": "R$ 125.981,44",
       "rtp": "96,68%",
-      "family": "Série Fortune",
+      "family": "Fortune series",
       "likes": "22730",
       "dislikes": "9531",
       "tone": "purple",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
       "stats": [
-        { "label": "Online agora", "value": "984", "highlight": true },
-        { "label": "Total pago", "value": "R$ 215.331.012,18" },
-        { "label": "RTP real", "value": "95,92%" },
-        { "label": "Ganho médio", "value": "R$ 1,91" }
+        { "label": "Online now", "value": "984", "highlight": true },
+        { "label": "Total paid", "value": "R$ 215.331.012,18" },
+        { "label": "Live RTP", "value": "95,92%" },
+        { "label": "Average win", "value": "R$ 1,91" }
       ],
       "bigWins": [
         { "player": "ma**", "payout": "R$ 1.540,00", "bet": "R$ 2,00", "multiplier": "770x" },
@@ -122,17 +122,17 @@
       "todayPayout": "R$ 39.132.442,7",
       "lastMinutes": "R$ 184.620,35",
       "rtp": "95,01%",
-      "family": "Mesma família do Fortune Rabbit",
+      "family": "Same family as Fortune Rabbit",
       "likes": "45190",
       "dislikes": "12004",
       "tone": "red",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
       "stats": [
-        { "label": "Online agora", "value": "2.481", "highlight": true },
-        { "label": "Total pago", "value": "R$ 618.204.551,09" },
-        { "label": "RTP real", "value": "95,01%" },
-        { "label": "Ganho médio", "value": "R$ 3,81" }
+        { "label": "Online now", "value": "2.481", "highlight": true },
+        { "label": "Total paid", "value": "R$ 618.204.551,09" },
+        { "label": "Live RTP", "value": "95,01%" },
+        { "label": "Average win", "value": "R$ 3,81" }
       ],
       "bigWins": [
         { "player": "lu**", "payout": "R$ 3.100,00", "bet": "R$ 10,00", "multiplier": "310x" },
@@ -149,17 +149,17 @@
       "todayPayout": "R$ 24.123.824,41",
       "lastMinutes": "R$ 98.450,10",
       "rtp": "96,75%",
-      "family": "Série Fortune",
+      "family": "Fortune series",
       "likes": "18230",
       "dislikes": "5714",
       "tone": "gold",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
       "stats": [
-        { "label": "Online agora", "value": "412", "highlight": true },
-        { "label": "Total pago", "value": "R$ 120.205.102,30" },
-        { "label": "RTP real", "value": "96,02%" },
-        { "label": "Ganho médio", "value": "R$ 2,05" }
+        { "label": "Online now", "value": "412", "highlight": true },
+        { "label": "Total paid", "value": "R$ 120.205.102,30" },
+        { "label": "Live RTP", "value": "96,02%" },
+        { "label": "Average win", "value": "R$ 2,05" }
       ],
       "bigWins": [
         { "player": "pe**", "payout": "R$ 990,00", "bet": "R$ 2,00", "multiplier": "495x" },
@@ -176,17 +176,17 @@
       "todayPayout": "R$ 16.721.649,85",
       "lastMinutes": "R$ 77.025,11",
       "rtp": "96,75%",
-      "family": "Linha colorida de slots",
+      "family": "Colorful slot line",
       "likes": "16312",
       "dislikes": "3810",
       "tone": "red",
       "section": "popular",
       "tags": ["slots", "popular"],
       "stats": [
-        { "label": "Online agora", "value": "311", "highlight": true },
-        { "label": "Total pago", "value": "R$ 87.202.141,11" },
-        { "label": "RTP real", "value": "96,44%" },
-        { "label": "Ganho médio", "value": "R$ 1,88" }
+        { "label": "Online now", "value": "311", "highlight": true },
+        { "label": "Total paid", "value": "R$ 87.202.141,11" },
+        { "label": "Live RTP", "value": "96,44%" },
+        { "label": "Average win", "value": "R$ 1,88" }
       ],
       "bigWins": [
         { "player": "an**", "payout": "R$ 620,00", "bet": "R$ 1,00", "multiplier": "620x" },
@@ -203,17 +203,17 @@
       "todayPayout": "R$ 3.100.348,20",
       "lastMinutes": "R$ 28.007,10",
       "rtp": "97,00%",
-      "family": "Crash clássico",
+      "family": "Classic crash",
       "likes": "21450",
       "dislikes": "5520",
       "tone": "red",
       "section": "crash",
       "tags": ["crash", "popular"],
       "stats": [
-        { "label": "Online agora", "value": "640", "highlight": true },
-        { "label": "Total pago", "value": "R$ 93.512.144,19" },
-        { "label": "RTP real", "value": "97,00%" },
-        { "label": "Ganho médio", "value": "R$ 5,46" }
+        { "label": "Online now", "value": "640", "highlight": true },
+        { "label": "Total paid", "value": "R$ 93.512.144,19" },
+        { "label": "Live RTP", "value": "97,00%" },
+        { "label": "Average win", "value": "R$ 5,46" }
       ],
       "bigWins": [
         { "player": "ce**", "payout": "R$ 1.500,00", "bet": "R$ 5,00", "multiplier": "300x" },
@@ -230,17 +230,17 @@
       "todayPayout": "R$ 2.420.647,05",
       "lastMinutes": "R$ 31.884,12",
       "rtp": "97,00%",
-      "family": "Crash de alta rotação",
+      "family": "High-speed crash",
       "likes": "18110",
       "dislikes": "4100",
       "tone": "gold",
       "section": "crash",
       "tags": ["crash"],
       "stats": [
-        { "label": "Online agora", "value": "721", "highlight": true },
-        { "label": "Total pago", "value": "R$ 74.051.884,17" },
-        { "label": "RTP real", "value": "96,88%" },
-        { "label": "Ganho médio", "value": "R$ 4,12" }
+        { "label": "Online now", "value": "721", "highlight": true },
+        { "label": "Total paid", "value": "R$ 74.051.884,17" },
+        { "label": "Live RTP", "value": "96,88%" },
+        { "label": "Average win", "value": "R$ 4,12" }
       ],
       "bigWins": [
         { "player": "mi**", "payout": "R$ 1.020,00", "bet": "R$ 2,00", "multiplier": "510x" },
@@ -257,17 +257,17 @@
       "todayPayout": "R$ 623.735,84",
       "lastMinutes": "R$ 12.330,41",
       "rtp": "96,00%",
-      "family": "Crash e mini games",
+      "family": "Crash and mini games",
       "likes": "10220",
       "dislikes": "2660",
       "tone": "purple",
       "section": "crash",
       "tags": ["crash"],
       "stats": [
-        { "label": "Online agora", "value": "301", "highlight": true },
-        { "label": "Total pago", "value": "R$ 21.872.661,77" },
-        { "label": "RTP real", "value": "95,88%" },
-        { "label": "Ganho médio", "value": "R$ 1,54" }
+        { "label": "Online now", "value": "301", "highlight": true },
+        { "label": "Total paid", "value": "R$ 21.872.661,77" },
+        { "label": "Live RTP", "value": "95,88%" },
+        { "label": "Average win", "value": "R$ 1,54" }
       ],
       "bigWins": [
         { "player": "ju**", "payout": "R$ 320,00", "bet": "R$ 1,00", "multiplier": "320x" },
@@ -284,17 +284,17 @@
       "todayPayout": "R$ 995.236,77",
       "lastMinutes": "R$ 22.114,99",
       "rtp": "97,30%",
-      "family": "Crash futurista",
+      "family": "Futuristic crash",
       "likes": "8440",
       "dislikes": "1840",
       "tone": "green",
       "section": "crash",
       "tags": ["crash"],
       "stats": [
-        { "label": "Online agora", "value": "274", "highlight": true },
-        { "label": "Total pago", "value": "R$ 32.108.554,14" },
-        { "label": "RTP real", "value": "96,93%" },
-        { "label": "Ganho médio", "value": "R$ 2,08" }
+        { "label": "Online now", "value": "274", "highlight": true },
+        { "label": "Total paid", "value": "R$ 32.108.554,14" },
+        { "label": "Live RTP", "value": "96,93%" },
+        { "label": "Average win", "value": "R$ 2,08" }
       ],
       "bigWins": [
         { "player": "ve**", "payout": "R$ 480,00", "bet": "R$ 1,00", "multiplier": "480x" },
@@ -311,17 +311,17 @@
       "todayPayout": "R$ 111.475,11",
       "lastMinutes": "R$ 6.018,88",
       "rtp": "96,50%",
-      "family": "Crash ao vivo",
+      "family": "Live crash",
       "likes": "3290",
       "dislikes": "711",
       "tone": "purple",
       "section": "crash",
       "tags": ["crash"],
       "stats": [
-        { "label": "Online agora", "value": "98", "highlight": true },
-        { "label": "Total pago", "value": "R$ 5.998.370,10" },
-        { "label": "RTP real", "value": "95,98%" },
-        { "label": "Ganho médio", "value": "R$ 1,14" }
+        { "label": "Online now", "value": "98", "highlight": true },
+        { "label": "Total paid", "value": "R$ 5.998.370,10" },
+        { "label": "Live RTP", "value": "95,98%" },
+        { "label": "Average win", "value": "R$ 1,14" }
       ],
       "bigWins": [
         { "player": "he**", "payout": "R$ 200,00", "bet": "R$ 1,00", "multiplier": "200x" },
@@ -338,17 +338,17 @@
       "todayPayout": "R$ 122.083,00",
       "lastMinutes": "R$ 4.902,18",
       "rtp": "96,20%",
-      "family": "Mini game casual",
+      "family": "Casual mini game",
       "likes": "2700",
       "dislikes": "580",
       "tone": "gold",
       "section": "crash",
       "tags": ["crash"],
       "stats": [
-        { "label": "Online agora", "value": "88", "highlight": true },
-        { "label": "Total pago", "value": "R$ 4.221.700,02" },
-        { "label": "RTP real", "value": "95,44%" },
-        { "label": "Ganho médio", "value": "R$ 0,98" }
+        { "label": "Online now", "value": "88", "highlight": true },
+        { "label": "Total paid", "value": "R$ 4.221.700,02" },
+        { "label": "Live RTP", "value": "95,44%" },
+        { "label": "Average win", "value": "R$ 0,98" }
       ],
       "bigWins": [
         { "player": "na**", "payout": "R$ 92,00", "bet": "R$ 1,00", "multiplier": "92x" },
@@ -365,17 +365,17 @@
       "todayPayout": "R$ 1.746.425,50",
       "lastMinutes": "R$ 14.681,20",
       "rtp": "97,30%",
-      "family": "Mesa ao vivo",
+      "family": "Live table",
       "likes": "10492",
       "dislikes": "2288",
       "tone": "green",
       "section": "popular",
       "tags": ["live", "popular"],
       "stats": [
-        { "label": "Online agora", "value": "233", "highlight": true },
-        { "label": "Total pago", "value": "R$ 45.822.990,10" },
-        { "label": "RTP real", "value": "97,01%" },
-        { "label": "Ganho médio", "value": "R$ 4,71" }
+        { "label": "Online now", "value": "233", "highlight": true },
+        { "label": "Total paid", "value": "R$ 45.822.990,10" },
+        { "label": "Live RTP", "value": "97,01%" },
+        { "label": "Average win", "value": "R$ 4,71" }
       ],
       "bigWins": [
         { "player": "we**", "payout": "R$ 1.120,00", "bet": "R$ 5,00", "multiplier": "224x" },
