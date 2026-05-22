@@ -494,7 +494,7 @@ button {
 
 .promo-hero-row {
   display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(260px, 0.9fr);
+  grid-template-columns: minmax(0, 2.4fr) minmax(260px, 0.85fr);
   gap: 16px;
 }
 
@@ -504,17 +504,21 @@ button {
   gap: 14px;
 }
 
+.hero-banner-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .hero-banner {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
-  gap: 14px;
-  padding: 14px;
-  border-radius: 24px;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 22px;
   background: var(--panel);
 }
 
 .hero-banner-art {
-  aspect-ratio: 1.92;
+  aspect-ratio: 1.35;
 }
 
 .hero-banner-content,
@@ -522,6 +526,20 @@ button {
 .jackpot-copy {
   display: grid;
   gap: 10px;
+}
+
+.hero-banner-content {
+  align-content: start;
+}
+
+.hero-banner-content strong {
+  font-size: 1.05rem;
+}
+
+.hero-banner-content p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
 .hero-banner-button,
@@ -1206,6 +1224,10 @@ button {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .hero-banner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1273,6 +1295,10 @@ button {
   .wins-grid,
   .stats-grid,
   .live-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-banner-grid {
     grid-template-columns: 1fr;
   }
 

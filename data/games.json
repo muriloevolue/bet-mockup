@@ -170,7 +170,7 @@
       "tone": "crimson",
       "category": "crash",
       "section": "crash",
-      "tags": ["crash", "popular"],
+      "tags": ["crash"],
       "family": {
         "en": "Classic crash game with instant cashout",
         "es": "Crash clasico con retiro instantaneo",
@@ -385,6 +385,38 @@
         { "player": "we**", "payout": 1120, "bet": 5, "multiplier": 224 },
         { "player": "jo**", "payout": 880, "bet": 4, "multiplier": 220 },
         { "player": "lu**", "payout": 640, "bet": 2, "multiplier": 320 }
+      ]
+    },
+    {
+      "id": "brazilian-roulette",
+      "name": "Brazilian Roulette",
+      "provider": "Evolution",
+      "tone": "violet",
+      "category": "live",
+      "section": "popular",
+      "tags": ["live", "popular", "roulette"],
+      "family": {
+        "en": "Localized live roulette room with Brazilian-style presentation",
+        "es": "Sala de ruleta en vivo con presentacion localizada para Brasil",
+        "pt": "Sala de roleta ao vivo com apresentacao localizada para o Brasil"
+      },
+      "badge": 388,
+      "online": 388,
+      "todayPayout": 1714647.5,
+      "lastMinutes": 12184.36,
+      "rtp": 97.3,
+      "likes": 12110,
+      "dislikes": 2042,
+      "stats": [
+        { "key": "onlineNow", "value": 208, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 38827314.24, "format": "currency" },
+        { "key": "liveRtp", "value": 97.12, "format": "percent" },
+        { "key": "avgWin", "value": 4.28, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "le**", "payout": 980, "bet": 5, "multiplier": 196 },
+        { "player": "ma**", "payout": 740, "bet": 2, "multiplier": 370 },
+        { "player": "jo**", "payout": 480, "bet": 2, "multiplier": 240 }
       ]
     },
     {

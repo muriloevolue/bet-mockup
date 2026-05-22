@@ -60,35 +60,17 @@ const UI_COPY = {
       { icon: "➤", label: "App preview" }
     ],
     heroBanners: [
-      {
-        badge: "Fresh lobby",
-        title: "New slots this week",
-        subtitle: "Feature-rich releases placed beside the top earners.",
-        cta: "Open game",
-        tone: "emerald",
-        gameId: "fortune-dragon"
-      },
-      {
-        badge: "Fast action",
-        title: "Crash rooms are hot",
-        subtitle: "Short rounds, quick entry and visible live momentum.",
-        cta: "Watch now",
-        tone: "crimson",
-        gameId: "aviator"
-      },
-      {
-        badge: "Live tables",
-        title: "Dealer-style spotlight",
-        subtitle: "Cleaner detail pages for games that need trust at first glance.",
-        cta: "Enter table",
-        tone: "forest",
-        gameId: "bac-bo"
-      }
+      { badge: "New games", title: "New Games", subtitle: "Fresh arrivals at the top of the lobby.", cta: "Open", tone: "violet", gameId: "fortune-dragon" },
+      { badge: "Featured", title: "Inferno Fortune", subtitle: "Promoted slot highlight in the hero rail.", cta: "Open", tone: "ruby", gameId: "gates-of-olympus" },
+      { badge: "Tournament", title: "Aviator Crash", subtitle: "Fast rounds with visible competitive framing.", cta: "Open", tone: "amber", gameId: "aviator-crash" },
+      { badge: "Live roulette", title: "Auto Mega Roulette", subtitle: "Dealer-style positioning near the top.", cta: "Open", tone: "violet", gameId: "brazilian-roulette" },
+      { badge: "VIP", title: "Exclusive Benefits", subtitle: "Promotional utility card mixed into the home hero.", cta: "Open", tone: "forest", gameId: "fortune-rabbit" },
+      { badge: "Popular", title: "Most Played", subtitle: "Shortcut into the strongest weekly picks.", cta: "Open", tone: "violet", gameId: "fortune-tiger" }
     ],
     sideBanners: [
-      { badge: "Trusted UX", title: "Fewer dead ends", cta: "Explore", gameId: "fortune-rabbit" },
-      { badge: "Quick rounds", title: "Low-friction entry", cta: "Open", gameId: "plinko-x" },
-      { badge: "Casino first", title: "Sportsbook kept subtle", cta: "See layout", gameId: "gates-of-olympus" }
+      { badge: "Download app", title: "Casino App", cta: "Download", gameId: "fortune-rabbit" },
+      { badge: "Up to 25%", title: "Cashback", cta: "Claim", gameId: "aviator-crash" },
+      { badge: "Regulated", title: "Licensed platform", cta: "Learn more", gameId: "brazilian-roulette" }
     ],
     sessionHint: "Use the demo email and password",
     signIn: "Sign in",
@@ -234,35 +216,17 @@ const UI_COPY = {
       { icon: "➤", label: "Vista de app" }
     ],
     heroBanners: [
-      {
-        badge: "Lobby renovado",
-        title: "Nuevos slots esta semana",
-        subtitle: "Lanzamientos mejor ubicados junto a los juegos con mas traccion.",
-        cta: "Abrir juego",
-        tone: "emerald",
-        gameId: "fortune-dragon"
-      },
-      {
-        badge: "Accion rapida",
-        title: "Salas crash encendidas",
-        subtitle: "Rondas cortas, entrada simple y sensacion de vivo mas clara.",
-        cta: "Ver ahora",
-        tone: "crimson",
-        gameId: "aviator"
-      },
-      {
-        badge: "Mesas en vivo",
-        title: "Enfoque tipo dealer",
-        subtitle: "Paginas de detalle mas limpias para juegos que dependen de confianza.",
-        cta: "Entrar a mesa",
-        tone: "forest",
-        gameId: "bac-bo"
-      }
+      { badge: "Nuevos juegos", title: "New Games", subtitle: "Lanzamientos al frente del lobby.", cta: "Abrir", tone: "violet", gameId: "fortune-dragon" },
+      { badge: "Destacado", title: "Inferno Fortune", subtitle: "Slot promocionado en la franja principal.", cta: "Abrir", tone: "ruby", gameId: "gates-of-olympus" },
+      { badge: "Torneo", title: "Aviator Crash", subtitle: "Rondas rapidas con marco competitivo.", cta: "Abrir", tone: "amber", gameId: "aviator-crash" },
+      { badge: "Ruleta en vivo", title: "Auto Mega Roulette", subtitle: "Posicionada arriba como mesa foco.", cta: "Abrir", tone: "violet", gameId: "brazilian-roulette" },
+      { badge: "VIP", title: "Beneficios Exclusivos", subtitle: "Tarjeta utilitaria mezclada en el hero.", cta: "Abrir", tone: "forest", gameId: "fortune-rabbit" },
+      { badge: "Popular", title: "Mas Jugados", subtitle: "Acceso rapido a los favoritos semanales.", cta: "Abrir", tone: "violet", gameId: "fortune-tiger" }
     ],
     sideBanners: [
-      { badge: "UX confiable", title: "Menos callejones sin salida", cta: "Explorar", gameId: "fortune-rabbit" },
-      { badge: "Rondas rapidas", title: "Entrada sin friccion", cta: "Abrir", gameId: "plinko-x" },
-      { badge: "Casino primero", title: "Sportsbook casi invisible", cta: "Ver layout", gameId: "gates-of-olympus" }
+      { badge: "Descarga app", title: "Casino App", cta: "Descargar", gameId: "fortune-rabbit" },
+      { badge: "Hasta 25%", title: "Cashback", cta: "Cobrar", gameId: "aviator-crash" },
+      { badge: "Regulada", title: "Plataforma licenciada", cta: "Saber mas", gameId: "brazilian-roulette" }
     ],
     sessionHint: "Usa el correo y la clave demo",
     signIn: "Entrar",
@@ -408,35 +372,17 @@ const UI_COPY = {
       { icon: "➤", label: "Preview do app" }
     ],
     heroBanners: [
-      {
-        badge: "Lobby novo",
-        title: "Slots frescos na vitrine",
-        subtitle: "Lancamentos organizados ao lado dos jogos com maior volume.",
-        cta: "Abrir jogo",
-        tone: "emerald",
-        gameId: "fortune-dragon"
-      },
-      {
-        badge: "Acao rapida",
-        title: "Salas crash aquecidas",
-        subtitle: "Rodadas curtas, entrada simples e sensacao de tempo real mais clara.",
-        cta: "Ver agora",
-        tone: "crimson",
-        gameId: "aviator"
-      },
-      {
-        badge: "Mesas ao vivo",
-        title: "Destaque estilo dealer",
-        subtitle: "Detalhe mais limpo para jogos que precisam passar confianca de cara.",
-        cta: "Entrar na mesa",
-        tone: "forest",
-        gameId: "bac-bo"
-      }
+      { badge: "Novos jogos", title: "New Games", subtitle: "Lancamentos no topo do lobby.", cta: "Abrir", tone: "violet", gameId: "fortune-dragon" },
+      { badge: "Destaque", title: "Inferno Fortune", subtitle: "Slot promocionado na faixa principal.", cta: "Abrir", tone: "ruby", gameId: "gates-of-olympus" },
+      { badge: "Torneio", title: "Aviator Crash", subtitle: "Rodadas rapidas com enquadramento competitivo.", cta: "Abrir", tone: "amber", gameId: "aviator-crash" },
+      { badge: "Roleta ao vivo", title: "Auto Mega Roulette", subtitle: "Mesa de destaque posicionada no topo.", cta: "Abrir", tone: "violet", gameId: "brazilian-roulette" },
+      { badge: "VIP", title: "Beneficios Exclusivos", subtitle: "Card utilitario misturado ao hero principal.", cta: "Abrir", tone: "forest", gameId: "fortune-rabbit" },
+      { badge: "Popular", title: "Mais Jogados", subtitle: "Atalho direto para os favoritos da semana.", cta: "Abrir", tone: "violet", gameId: "fortune-tiger" }
     ],
     sideBanners: [
-      { badge: "UX confiavel", title: "Menos becos sem saida", cta: "Explorar", gameId: "fortune-rabbit" },
-      { badge: "Rodadas rapidas", title: "Entrada sem friccao", cta: "Abrir", gameId: "plinko-x" },
-      { badge: "Cassino em foco", title: "Sportsbook quase invisivel", cta: "Ver layout", gameId: "gates-of-olympus" }
+      { badge: "Baixe app", title: "Casino App", cta: "Baixar", gameId: "fortune-rabbit" },
+      { badge: "Ate 25%", title: "Cashback", cta: "Resgatar", gameId: "aviator-crash" },
+      { badge: "Regulada", title: "Plataforma licenciada", cta: "Saber mais", gameId: "brazilian-roulette" }
     ],
     sessionHint: "Use o email e a senha demo",
     signIn: "Entrar",
@@ -539,19 +485,24 @@ const UI_COPY = {
 };
 
 const JACKPOTS = [
-  { rank: 1, gameId: "fortune-rabbit", amount: 8689039.11, tone: "violet" },
-  { rank: 3, gameId: "fortune-tiger", amount: 3983054.79, tone: "ruby" },
-  { rank: 5, gameId: "fortune-ox", amount: 2720366.5, tone: "gold" },
-  { rank: 7, gameId: "aviator-crash", amount: 2420647.05, tone: "amber" },
-  { rank: 9, gameId: "bac-bo", amount: 2272854.5, tone: "forest" }
+  { rank: 1, gameId: "fortune-rabbit", amount: 12766782.33, tone: "violet" },
+  { rank: 2, gameId: "fortune-dragon", amount: 5707803.39, tone: "violet" },
+  { rank: 3, gameId: "fortune-tiger", amount: 5264274.43, tone: "ruby" },
+  { rank: 4, gameId: "aviator-crash", amount: 4373305.34, tone: "amber" },
+  { rank: 5, gameId: "aviator", amount: 3819123.96, tone: "ruby" },
+  { rank: 6, gameId: "fortune-ox", amount: 2969660.67, tone: "gold" },
+  { rank: 7, gameId: "bac-bo", amount: 2539647.0, tone: "forest" },
+  { rank: 8, gameId: "pinata-wins", amount: 2349038.15, tone: "ruby" },
+  { rank: 9, gameId: "brazilian-roulette", amount: 1714647.5, tone: "violet" },
+  { rank: 10, gameId: "jetx", amount: 1018331.35, tone: "sky" }
 ];
 
 const TICKER_ITEMS = [
-  { player: "MAYLAN SO**", gameId: "wild-bandito", amount: 32840 },
-  { player: "WESLEY RO**", gameId: "bac-bo", amount: 16000 },
-  { player: "DANIEL CR**", gameId: "gates-of-olympus", amount: 12650 },
-  { player: "NATALIA MA**", gameId: "starlight-princess", amount: 10750 },
-  { player: "GUILHERME BA**", gameId: "aviator", amount: 9216 }
+  { player: "Fabricio He**", gameId: "wild-bandito", amount: 40000 },
+  { player: "Marcelo He**", gameId: "brazilian-roulette", amount: 35100 },
+  { player: "Caio Bo**", gameId: "sweet-bonanza", amount: 30000 },
+  { player: "Eduardo Mo**", gameId: "gates-of-olympus", amount: 19099 },
+  { player: "Leticia Go**", gameId: "brazilian-roulette", amount: 15000 }
 ];
 
 const state = {
@@ -1875,7 +1826,7 @@ function showToast(message) {
 }
 
 function getArtVariableStyle(src) {
-  return `--art-image: url("${src}")`;
+  return `--art-image: url('${src}')`;
 }
 
 function getGameArtwork(game, variant = "card") {
