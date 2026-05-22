@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulse Casino Mockup</title>
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
   <body>
     <div class="shell">
-      <aside class="sidebar">
-        <div class="brand-switch">
-          <button class="switch-chip is-active">Casino</button>
-          <button class="switch-chip">Sports</button>
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">
+            <span class="brand-diamond"></span>
+            <div>
+              <strong id="sidebar-brand-name">Pulse Casino</strong>
+              <small id="sidebar-brand-caption">Demo lobby</small>
+            </div>
+          </div>
+          <div class="sidebar-status">
+            <span class="status-dot"></span>
+            <span id="sidebar-status-text">Casino live preview</span>
+          </div>
         </div>
 
         <div class="sidebar-promos" id="sidebar-promos"></div>
@@ -29,21 +38,24 @@
               <span></span>
               <span></span>
             </button>
-            <div class="brand-mark">
-              <span class="brand-diamond"></span>
-              <strong>CASINO</strong>
+            <div class="brand-lockup">
+              <strong id="topbar-brand-name">Pulse Casino</strong>
+              <span class="topbar-chip" id="topbar-brand-chip">Licensed-style demo</span>
             </div>
           </div>
 
           <div class="topbar-actions">
             <label class="search-field">
               <span class="search-icon">⌕</span>
-              <input
-                id="search-input"
-                type="search"
-                placeholder="Search games, providers, tags..."
-              />
+              <input id="search-input" type="search" placeholder="Search games" />
             </label>
+
+            <div class="locale-switcher" id="locale-switcher" aria-label="Language switcher">
+              <button class="locale-button" data-locale="en" type="button">EN</button>
+              <button class="locale-button" data-locale="es" type="button">ES</button>
+              <button class="locale-button" data-locale="pt" type="button">PT</button>
+            </div>
+
             <div class="session-actions" id="session-actions"></div>
           </div>
         </header>
@@ -53,43 +65,67 @@
             <div class="ticker-row" id="ticker-row"></div>
             <div class="jackpot-grid" id="jackpot-grid"></div>
             <div class="promo-hero-row" id="promo-hero-row"></div>
+
             <section class="shelf-section">
               <div class="section-header">
-                <h2>Most played this week</h2>
-                <button class="outline-button compact">View all</button>
+                <div>
+                  <p class="section-kicker" id="popular-kicker">Crowd picks</p>
+                  <h2 id="popular-title">Most played this week</h2>
+                </div>
+                <button class="outline-button compact" id="popular-view-all" type="button">View all</button>
               </div>
               <div class="shelf-carousel">
-                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="popular" aria-label="Previous">‹</button>
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="popular" aria-label="Previous">
+                  ‹
+                </button>
                 <div class="game-row" id="popular-row" data-shelf-key="popular"></div>
-                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="popular" aria-label="Next">›</button>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="popular" aria-label="Next">
+                  ›
+                </button>
               </div>
             </section>
+
             <section class="shelf-section">
               <div class="section-header">
-                <h2>Crash Games</h2>
-                <button class="outline-button compact">View all</button>
+                <div>
+                  <p class="section-kicker" id="crash-kicker">Fast rounds</p>
+                  <h2 id="crash-title">Crash and instant games</h2>
+                </div>
+                <button class="outline-button compact" id="crash-view-all" type="button">View all</button>
               </div>
               <div class="shelf-carousel">
-                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="crash" aria-label="Previous">‹</button>
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="crash" aria-label="Previous">
+                  ‹
+                </button>
                 <div class="game-row" id="crash-row" data-shelf-key="crash"></div>
-                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="crash" aria-label="Next">›</button>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="crash" aria-label="Next">
+                  ›
+                </button>
               </div>
             </section>
+
             <section class="shelf-section">
               <div class="section-header">
-                <h2>Slot Games</h2>
-                <button class="outline-button compact">View all</button>
+                <div>
+                  <p class="section-kicker" id="slots-kicker">Classic casino</p>
+                  <h2 id="slots-title">Slot games</h2>
+                </div>
+                <button class="outline-button compact" id="slots-view-all" type="button">View all</button>
               </div>
               <div class="shelf-carousel">
-                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="slots" aria-label="Previous">‹</button>
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="slots" aria-label="Previous">
+                  ‹
+                </button>
                 <div class="game-row" id="slots-row" data-shelf-key="slots"></div>
-                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="slots" aria-label="Next">›</button>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="slots" aria-label="Next">
+                  ›
+                </button>
               </div>
             </section>
           </section>
 
           <section class="page-view" id="view-detail">
-            <button class="back-link" id="back-button">← Back</button>
+            <button class="back-link" id="back-button" type="button">← Back to lobby</button>
 
             <section class="detail-hero" id="detail-hero">
               <div class="detail-hero-overlay">
@@ -102,12 +138,15 @@
 
             <section class="detail-stats">
               <div class="section-header">
-                <h2>Statistics</h2>
-                <div class="pill-tabs">
-                  <button class="pill-tab">Today</button>
-                  <button class="pill-tab">7D</button>
-                  <button class="pill-tab">15D</button>
-                  <button class="pill-tab is-active">30D</button>
+                <div>
+                  <p class="section-kicker" id="stats-kicker">Performance</p>
+                  <h2 id="stats-title">Statistics</h2>
+                </div>
+                <div class="pill-tabs" id="stats-tabs">
+                  <button class="pill-tab" type="button">Today</button>
+                  <button class="pill-tab" type="button">7D</button>
+                  <button class="pill-tab" type="button">15D</button>
+                  <button class="pill-tab is-active" type="button">30D</button>
                 </div>
               </div>
               <div class="stats-grid" id="stats-grid"></div>
@@ -115,11 +154,14 @@
 
             <section class="detail-wins">
               <div class="section-header">
-                <h2>Big wins</h2>
-                <div class="pill-tabs">
-                  <button class="pill-tab">Today</button>
-                  <button class="pill-tab">3 days</button>
-                  <button class="pill-tab is-active">7 days</button>
+                <div>
+                  <p class="section-kicker" id="wins-kicker">Player highlights</p>
+                  <h2 id="wins-title">Big wins</h2>
+                </div>
+                <div class="pill-tabs" id="wins-tabs">
+                  <button class="pill-tab" type="button">Today</button>
+                  <button class="pill-tab" type="button">3 days</button>
+                  <button class="pill-tab is-active" type="button">7 days</button>
                 </div>
               </div>
               <div class="wins-grid" id="wins-grid"></div>
@@ -127,13 +169,20 @@
 
             <section class="shelf-section">
               <div class="section-header">
-                <h2 id="related-title">More games</h2>
-                <button class="outline-button compact">View all</button>
+                <div>
+                  <p class="section-kicker" id="related-kicker">From the same studio</p>
+                  <h2 id="related-title">More games</h2>
+                </div>
+                <button class="outline-button compact" id="related-view-all" type="button">View all</button>
               </div>
               <div class="shelf-carousel">
-                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="related" aria-label="Previous">‹</button>
+                <button class="shelf-nav" data-shelf-nav="prev" data-shelf-key="related" aria-label="Previous">
+                  ‹
+                </button>
                 <div class="game-row" id="related-row" data-shelf-key="related"></div>
-                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="related" aria-label="Next">›</button>
+                <button class="shelf-nav" data-shelf-nav="next" data-shelf-key="related" aria-label="Next">
+                  ›
+                </button>
               </div>
             </section>
           </section>
@@ -145,19 +194,19 @@
       <div class="auth-card login-card">
         <div class="auth-header">
           <div>
-            <p class="eyebrow">Demo Access</p>
-            <h3>Sign in</h3>
+            <p class="eyebrow" id="login-eyebrow">Demo access</p>
+            <h3 id="login-title">Sign in</h3>
           </div>
-          <button class="icon-button" id="close-login-button">✕</button>
+          <button class="icon-button" id="close-login-button" type="button">✕</button>
         </div>
 
         <form id="login-form" class="auth-form">
           <div class="login-tip">
-            <strong>Use the mock demo credentials</strong>
+            <strong id="login-tip-title">Use the mock demo credentials</strong>
             <span id="login-credentials-hint"></span>
           </div>
           <label>
-            <span>Email</span>
+            <span id="login-email-label">Email</span>
             <input
               type="email"
               name="email"
@@ -167,14 +216,8 @@
             />
           </label>
           <label>
-            <span>Password</span>
-            <input
-              type="password"
-              name="password"
-              id="login-password"
-              placeholder="demo123"
-              required
-            />
+            <span id="login-password-label">Password</span>
+            <input type="password" name="password" id="login-password" placeholder="demo123" required />
           </label>
           <button type="submit" class="primary-button" id="login-submit">Sign in to demo</button>
         </form>
@@ -185,10 +228,10 @@
       <div class="auth-card play-card">
         <div class="auth-header">
           <div>
-            <p class="eyebrow">Demo Mode</p>
+            <p class="eyebrow" id="play-eyebrow">Demo mode</p>
             <h3 id="play-title">Set bet</h3>
           </div>
-          <button class="icon-button" id="close-play-button">✕</button>
+          <button class="icon-button" id="close-play-button" type="button">✕</button>
         </div>
 
         <form id="play-form" class="auth-form">
@@ -197,26 +240,18 @@
             <span id="play-game-meta"></span>
           </div>
           <div class="mini-stat-block">
-            <small>Available balance</small>
+            <small id="play-balance-label">Available balance</small>
             <strong id="play-balance"></strong>
           </div>
           <label>
-            <span>How much do you want to bet?</span>
-            <input
-              type="number"
-              name="amount"
-              id="play-amount"
-              min="1"
-              step="0.01"
-              placeholder="10.00"
-              required
-            />
+            <span id="play-amount-label">How much do you want to bet?</span>
+            <input type="number" name="amount" id="play-amount" min="1" step="0.01" placeholder="10.00" required />
           </label>
-          <div class="quick-amounts">
-            <button type="button" class="outline-button compact" data-quick-amount="10">R$ 10</button>
-            <button type="button" class="outline-button compact" data-quick-amount="25">R$ 25</button>
-            <button type="button" class="outline-button compact" data-quick-amount="50">R$ 50</button>
-            <button type="button" class="outline-button compact" data-quick-amount="100">R$ 100</button>
+          <div class="quick-amounts" id="quick-amounts">
+            <button type="button" class="outline-button compact" data-quick-amount="10">10</button>
+            <button type="button" class="outline-button compact" data-quick-amount="25">25</button>
+            <button type="button" class="outline-button compact" data-quick-amount="50">50</button>
+            <button type="button" class="outline-button compact" data-quick-amount="100">100</button>
           </div>
           <button type="submit" class="primary-button" id="play-submit">Play now</button>
         </form>
@@ -225,6 +260,6 @@
 
     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
-    <script src="./app.js?v=2" type="module"></script>
+    <script src="./app.js?v=3" type="module"></script>
   </body>
 </html>

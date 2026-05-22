@@ -1,386 +1,678 @@
 {
-  "sidebarPromos": [
-    { "top": "Play and win", "title": "Daily Mini Games", "icon": "🎲" },
-    { "top": "R$ 50,00", "title": "Refer and Earn", "icon": "💥" },
-    { "top": "Join the", "title": "Tournaments", "icon": "🏆" },
-    { "top": "Join the", "title": "Missions", "icon": "🎯" }
-  ],
-  "sidebarNav": [
-    { "icon": "◈", "label": "Casino Games" },
-    { "icon": "▣", "label": "Live Casino" },
-    { "icon": "▤", "label": "Slot Games" },
-    { "icon": "◎", "label": "All Games" },
-    { "icon": "⌘", "label": "Providers" },
-    { "icon": "◌", "label": "Mines" },
-    { "icon": "🐯", "label": "Fortune Tiger" },
-    { "icon": "✈", "label": "Aviator" },
-    { "icon": "◍", "label": "Brazilian Roulette" },
-    { "icon": "⚽", "label": "Football Studio" },
-    { "icon": "◔", "label": "Fortune Fruits" },
-    { "icon": "☠", "label": "Fortune Pirates" }
-  ],
-  "sidebarBottom": [
-    { "icon": "✦", "label": "Promotions" },
-    { "icon": "⊛", "label": "Help Center" },
-    { "icon": "◗", "label": "Live Support" },
-    { "icon": "🎁", "label": "Refer a friend" },
-    { "icon": "➤", "label": "Telegram" },
-    { "icon": "⇩", "label": "Download App" }
-  ],
-  "ticker": [
-    { "player": "MAYLAN SO**", "game": "LUCKY'S WILD PUB", "amount": "R$ 32.840,00" },
-    { "player": "WESLEY RO**", "game": "CASINO AUTO ME...", "amount": "R$ 16.000,00" },
-    { "player": "DANIEL CR**", "game": "GATES OF OLYMP...", "amount": "R$ 12.650,00" },
-    { "player": "NATALIA MA**", "game": "SANTA'S GREAT GI...", "amount": "R$ 10.750,00" },
-    { "player": "GUILHERME BA**", "game": "ARABIC ROULETTE", "amount": "R$ 9.216,00" }
-  ],
-  "jackpots": [
-    { "rank": 1, "name": "Fortune Rabbit", "amount": "R$ 8.689.039,11", "tone": "purple", "gameId": "fortune-rabbit" },
-    { "rank": 3, "name": "Fortune Tiger", "amount": "R$ 3.983.054,79", "tone": "red", "gameId": "fortune-tiger" },
-    { "rank": 5, "name": "Fortune Ox", "amount": "R$ 2.720.366,50", "tone": "gold", "gameId": "fortune-ox" },
-    { "rank": 7, "name": "Aviator Crash", "amount": "R$ 2.420.647,05", "tone": "gold", "gameId": "aviator-crash" },
-    { "rank": 9, "name": "Bac Bo", "amount": "R$ 2.272.854,50", "tone": "green", "gameId": "bac-bo" }
-  ],
-  "heroBanners": [
-    { "badge": "New games", "title": "New Games", "subtitle": "Now available in the casino", "cta": "Play now!", "tone": "blue", "gameId": "fortune-dragon" },
-    { "badge": "Auto Mega Roulette", "title": "Up to 500x", "subtitle": "Featured multipliers", "cta": "Enjoy now!", "tone": "purple", "gameId": "aviator" },
-    { "badge": "Tournament", "title": "R$ 50k", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red", "gameId": "fortune-tiger" }
-  ],
-  "sideBanners": [
-    { "badge": "Download our", "title": "Casino App!", "cta": "Download", "gameId": "fortune-rabbit" },
-    { "badge": "Up to 25%", "title": "Cashback!", "cta": "Claim", "gameId": "aviator-crash" },
-    { "badge": "Platform", "title": "Regulated", "cta": "Learn more", "gameId": "bac-bo" }
-  ],
   "games": [
     {
       "id": "fortune-rabbit",
       "name": "Fortune Rabbit",
       "provider": "PG Soft",
-      "badge": "2.869",
-      "online": "2.869",
-      "todayPayout": "R$ 8.395.647,89",
-      "lastMinutes": "R$ 252.778,06",
-      "rtp": "96,75%",
-      "family": "Same family as Fortune Tiger",
-      "likes": "31850",
-      "dislikes": "17595",
-      "tone": "purple",
+      "tone": "emerald",
+      "category": "slot",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
+      "family": {
+        "en": "Fortune series with lucky rabbit symbols",
+        "es": "Serie Fortune con simbolos de conejo de la suerte",
+        "pt": "Serie Fortune com simbolos de coelho da sorte"
+      },
+      "badge": 2869,
+      "online": 2869,
+      "todayPayout": 8395647.89,
+      "lastMinutes": 252778.06,
+      "rtp": 96.75,
+      "likes": 31850,
+      "dislikes": 17595,
       "stats": [
-        { "label": "Online now", "value": "1.090", "highlight": true },
-        { "label": "Total paid", "value": "R$ 331.741.767,98" },
-        { "label": "Live RTP", "value": "96,31%" },
-        { "label": "Average win", "value": "R$ 2,34" },
-        { "label": "Players", "value": "369.096" },
-        { "label": "Total bets", "value": "344.467.390,3" },
-        { "label": "House edge", "value": "4,00%" },
-        { "label": "Bets/hour", "value": "-" }
+        { "key": "onlineNow", "value": 1090, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 331741767.98, "format": "currency" },
+        { "key": "liveRtp", "value": 96.31, "format": "percent" },
+        { "key": "avgWin", "value": 2.34, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "ri**", "payout": "R$ 2.807,50", "bet": "R$ 5,00", "multiplier": "561.5x" },
-        { "player": "na**", "payout": "R$ 1.213,00", "bet": "R$ 2,00", "multiplier": "606.5x" },
-        { "player": "ai**", "payout": "R$ 581,00", "bet": "R$ 1,00", "multiplier": "581x" },
-        { "player": "pa**", "payout": "R$ 577,00", "bet": "R$ 1,00", "multiplier": "577x" },
-        { "player": "br**", "payout": "R$ 571,00", "bet": "R$ 1,00", "multiplier": "571x" },
-        { "player": "gi**", "payout": "R$ 335,25", "bet": "R$ 0,50", "multiplier": "670.5x" }
+        { "player": "ri**", "payout": 2807.5, "bet": 5, "multiplier": 561.5 },
+        { "player": "na**", "payout": 1213, "bet": 2, "multiplier": 606.5 },
+        { "player": "ai**", "payout": 581, "bet": 1, "multiplier": 581 },
+        { "player": "pa**", "payout": 577, "bet": 1, "multiplier": 577 },
+        { "player": "br**", "payout": 571, "bet": 1, "multiplier": 571 },
+        { "player": "gi**", "payout": 335.25, "bet": 0.5, "multiplier": 670.5 }
       ]
     },
     {
       "id": "fortune-dragon",
       "name": "Fortune Dragon",
       "provider": "PG Soft",
-      "badge": "1.987",
-      "online": "1.987",
-      "todayPayout": "R$ 7.251.729,62",
-      "lastMinutes": "R$ 125.981,44",
-      "rtp": "96,68%",
-      "family": "Fortune series",
-      "likes": "22730",
-      "dislikes": "9531",
-      "tone": "purple",
+      "tone": "ruby",
+      "category": "slot",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
+      "family": {
+        "en": "Fortune series with dragon bonuses",
+        "es": "Serie Fortune con bonos de dragon",
+        "pt": "Serie Fortune com bonus de dragao"
+      },
+      "badge": 1987,
+      "online": 1987,
+      "todayPayout": 7251729.62,
+      "lastMinutes": 125981.44,
+      "rtp": 96.68,
+      "likes": 22730,
+      "dislikes": 9531,
       "stats": [
-        { "label": "Online now", "value": "984", "highlight": true },
-        { "label": "Total paid", "value": "R$ 215.331.012,18" },
-        { "label": "Live RTP", "value": "95,92%" },
-        { "label": "Average win", "value": "R$ 1,91" }
+        { "key": "onlineNow", "value": 984, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 215331012.18, "format": "currency" },
+        { "key": "liveRtp", "value": 95.92, "format": "percent" },
+        { "key": "avgWin", "value": 1.91, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "ma**", "payout": "R$ 1.540,00", "bet": "R$ 2,00", "multiplier": "770x" },
-        { "player": "te**", "payout": "R$ 880,00", "bet": "R$ 2,00", "multiplier": "440x" },
-        { "player": "io**", "payout": "R$ 640,00", "bet": "R$ 1,00", "multiplier": "640x" }
+        { "player": "ma**", "payout": 1540, "bet": 2, "multiplier": 770 },
+        { "player": "te**", "payout": 880, "bet": 2, "multiplier": 440 },
+        { "player": "io**", "payout": 640, "bet": 1, "multiplier": 640 }
       ]
     },
     {
       "id": "fortune-tiger",
       "name": "Fortune Tiger",
       "provider": "PG Soft",
-      "badge": "1.451",
-      "online": "1.451",
-      "todayPayout": "R$ 39.132.442,7",
-      "lastMinutes": "R$ 184.620,35",
-      "rtp": "95,01%",
-      "family": "Same family as Fortune Rabbit",
-      "likes": "45190",
-      "dislikes": "12004",
-      "tone": "red",
+      "tone": "amber",
+      "category": "slot",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
+      "family": {
+        "en": "Fortune series with tiger wilds",
+        "es": "Serie Fortune con comodines de tigre",
+        "pt": "Serie Fortune com wilds de tigre"
+      },
+      "badge": 1451,
+      "online": 1451,
+      "todayPayout": 39132442.7,
+      "lastMinutes": 184620.35,
+      "rtp": 95.01,
+      "likes": 45190,
+      "dislikes": 12004,
       "stats": [
-        { "label": "Online now", "value": "2.481", "highlight": true },
-        { "label": "Total paid", "value": "R$ 618.204.551,09" },
-        { "label": "Live RTP", "value": "95,01%" },
-        { "label": "Average win", "value": "R$ 3,81" }
+        { "key": "onlineNow", "value": 2481, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 618204551.09, "format": "currency" },
+        { "key": "liveRtp", "value": 95.01, "format": "percent" },
+        { "key": "avgWin", "value": 3.81, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "lu**", "payout": "R$ 3.100,00", "bet": "R$ 10,00", "multiplier": "310x" },
-        { "player": "ka**", "payout": "R$ 1.200,00", "bet": "R$ 2,00", "multiplier": "600x" },
-        { "player": "vi**", "payout": "R$ 875,00", "bet": "R$ 2,50", "multiplier": "350x" }
+        { "player": "lu**", "payout": 3100, "bet": 10, "multiplier": 310 },
+        { "player": "ka**", "payout": 1200, "bet": 2, "multiplier": 600 },
+        { "player": "vi**", "payout": 875, "bet": 2.5, "multiplier": 350 }
       ]
     },
     {
       "id": "fortune-ox",
       "name": "Fortune Ox",
       "provider": "PG Soft",
-      "badge": "732",
-      "online": "732",
-      "todayPayout": "R$ 24.123.824,41",
-      "lastMinutes": "R$ 98.450,10",
-      "rtp": "96,75%",
-      "family": "Fortune series",
-      "likes": "18230",
-      "dislikes": "5714",
       "tone": "gold",
+      "category": "slot",
       "section": "popular",
       "tags": ["slots", "popular", "pgsoft"],
+      "family": {
+        "en": "Fortune series with ox respins",
+        "es": "Serie Fortune con respins de buey",
+        "pt": "Serie Fortune com respins de boi"
+      },
+      "badge": 732,
+      "online": 732,
+      "todayPayout": 24123824.41,
+      "lastMinutes": 98450.1,
+      "rtp": 96.75,
+      "likes": 18230,
+      "dislikes": 5714,
       "stats": [
-        { "label": "Online now", "value": "412", "highlight": true },
-        { "label": "Total paid", "value": "R$ 120.205.102,30" },
-        { "label": "Live RTP", "value": "96,02%" },
-        { "label": "Average win", "value": "R$ 2,05" }
+        { "key": "onlineNow", "value": 412, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 120205102.3, "format": "currency" },
+        { "key": "liveRtp", "value": 96.02, "format": "percent" },
+        { "key": "avgWin", "value": 2.05, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "pe**", "payout": "R$ 990,00", "bet": "R$ 2,00", "multiplier": "495x" },
-        { "player": "ja**", "payout": "R$ 721,00", "bet": "R$ 1,00", "multiplier": "721x" },
-        { "player": "ta**", "payout": "R$ 410,00", "bet": "R$ 1,00", "multiplier": "410x" }
+        { "player": "pe**", "payout": 990, "bet": 2, "multiplier": 495 },
+        { "player": "ja**", "payout": 721, "bet": 1, "multiplier": 721 },
+        { "player": "ta**", "payout": 410, "bet": 1, "multiplier": 410 }
       ]
     },
     {
       "id": "pinata-wins",
       "name": "Pinata Wins",
       "provider": "Pragmatic Play",
-      "badge": "723",
-      "online": "723",
-      "todayPayout": "R$ 16.721.649,85",
-      "lastMinutes": "R$ 77.025,11",
-      "rtp": "96,75%",
-      "family": "Colorful slot line",
-      "likes": "16312",
-      "dislikes": "3810",
-      "tone": "red",
+      "tone": "ruby",
+      "category": "slot",
       "section": "popular",
       "tags": ["slots", "popular"],
+      "family": {
+        "en": "Colorful fiesta slot with cascading wins",
+        "es": "Slot festivo con cascadas coloridas",
+        "pt": "Slot festivo com cascatas coloridas"
+      },
+      "badge": 723,
+      "online": 723,
+      "todayPayout": 16721649.85,
+      "lastMinutes": 77025.11,
+      "rtp": 96.75,
+      "likes": 16312,
+      "dislikes": 3810,
       "stats": [
-        { "label": "Online now", "value": "311", "highlight": true },
-        { "label": "Total paid", "value": "R$ 87.202.141,11" },
-        { "label": "Live RTP", "value": "96,44%" },
-        { "label": "Average win", "value": "R$ 1,88" }
+        { "key": "onlineNow", "value": 311, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 87202141.11, "format": "currency" },
+        { "key": "liveRtp", "value": 96.44, "format": "percent" },
+        { "key": "avgWin", "value": 1.88, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "an**", "payout": "R$ 620,00", "bet": "R$ 1,00", "multiplier": "620x" },
-        { "player": "re**", "payout": "R$ 501,50", "bet": "R$ 1,00", "multiplier": "501.5x" },
-        { "player": "lu**", "payout": "R$ 380,00", "bet": "R$ 1,00", "multiplier": "380x" }
+        { "player": "an**", "payout": 620, "bet": 1, "multiplier": 620 },
+        { "player": "re**", "payout": 501.5, "bet": 1, "multiplier": 501.5 },
+        { "player": "lu**", "payout": 380, "bet": 1, "multiplier": 380 }
       ]
     },
     {
       "id": "aviator",
       "name": "Aviator",
       "provider": "Spribe",
-      "badge": "134",
-      "online": "134",
-      "todayPayout": "R$ 3.100.348,20",
-      "lastMinutes": "R$ 28.007,10",
-      "rtp": "97,00%",
-      "family": "Classic crash",
-      "likes": "21450",
-      "dislikes": "5520",
-      "tone": "red",
+      "tone": "crimson",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash", "popular"],
+      "family": {
+        "en": "Classic crash game with instant cashout",
+        "es": "Crash clasico con retiro instantaneo",
+        "pt": "Crash classico com retirada instantanea"
+      },
+      "badge": 134,
+      "online": 134,
+      "todayPayout": 3100348.2,
+      "lastMinutes": 28007.1,
+      "rtp": 97,
+      "likes": 21450,
+      "dislikes": 5520,
       "stats": [
-        { "label": "Online now", "value": "640", "highlight": true },
-        { "label": "Total paid", "value": "R$ 93.512.144,19" },
-        { "label": "Live RTP", "value": "97,00%" },
-        { "label": "Average win", "value": "R$ 5,46" }
+        { "key": "onlineNow", "value": 640, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 93512144.19, "format": "currency" },
+        { "key": "liveRtp", "value": 97, "format": "percent" },
+        { "key": "avgWin", "value": 5.46, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "ce**", "payout": "R$ 1.500,00", "bet": "R$ 5,00", "multiplier": "300x" },
-        { "player": "so**", "payout": "R$ 942,00", "bet": "R$ 3,00", "multiplier": "314x" },
-        { "player": "al**", "payout": "R$ 680,00", "bet": "R$ 2,00", "multiplier": "340x" }
+        { "player": "ce**", "payout": 1500, "bet": 5, "multiplier": 300 },
+        { "player": "so**", "payout": 942, "bet": 3, "multiplier": 314 },
+        { "player": "al**", "payout": 680, "bet": 2, "multiplier": 340 }
       ]
     },
     {
       "id": "aviator-crash",
       "name": "Aviator Crash",
       "provider": "Spribe",
-      "badge": "2.759",
-      "online": "2.759",
-      "todayPayout": "R$ 2.420.647,05",
-      "lastMinutes": "R$ 31.884,12",
-      "rtp": "97,00%",
-      "family": "High-speed crash",
-      "likes": "18110",
-      "dislikes": "4100",
-      "tone": "gold",
+      "tone": "amber",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash"],
+      "family": {
+        "en": "High-speed crash rounds with larger bursts",
+        "es": "Rondas crash rapidas con picos mas altos",
+        "pt": "Rodadas crash rapidas com picos maiores"
+      },
+      "badge": 2759,
+      "online": 2759,
+      "todayPayout": 2420647.05,
+      "lastMinutes": 31884.12,
+      "rtp": 97,
+      "likes": 18110,
+      "dislikes": 4100,
       "stats": [
-        { "label": "Online now", "value": "721", "highlight": true },
-        { "label": "Total paid", "value": "R$ 74.051.884,17" },
-        { "label": "Live RTP", "value": "96,88%" },
-        { "label": "Average win", "value": "R$ 4,12" }
+        { "key": "onlineNow", "value": 721, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 74051884.17, "format": "currency" },
+        { "key": "liveRtp", "value": 96.88, "format": "percent" },
+        { "key": "avgWin", "value": 4.12, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "mi**", "payout": "R$ 1.020,00", "bet": "R$ 2,00", "multiplier": "510x" },
-        { "player": "ca**", "payout": "R$ 870,00", "bet": "R$ 3,00", "multiplier": "290x" },
-        { "player": "no**", "payout": "R$ 612,00", "bet": "R$ 2,00", "multiplier": "306x" }
+        { "player": "mi**", "payout": 1020, "bet": 2, "multiplier": 510 },
+        { "player": "ca**", "payout": 870, "bet": 3, "multiplier": 290 },
+        { "player": "no**", "payout": 612, "bet": 2, "multiplier": 306 }
       ]
     },
     {
       "id": "mines",
       "name": "Mines",
       "provider": "Spribe",
-      "badge": "156",
-      "online": "156",
-      "todayPayout": "R$ 623.735,84",
-      "lastMinutes": "R$ 12.330,41",
-      "rtp": "96,00%",
-      "family": "Crash and mini games",
-      "likes": "10220",
-      "dislikes": "2660",
-      "tone": "purple",
+      "tone": "violet",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash"],
+      "family": {
+        "en": "Grid mini game with mine reveals",
+        "es": "Mini juego de cuadrilla con minas ocultas",
+        "pt": "Mini game em grade com minas ocultas"
+      },
+      "badge": 156,
+      "online": 156,
+      "todayPayout": 623735.84,
+      "lastMinutes": 12330.41,
+      "rtp": 96,
+      "likes": 10220,
+      "dislikes": 2660,
       "stats": [
-        { "label": "Online now", "value": "301", "highlight": true },
-        { "label": "Total paid", "value": "R$ 21.872.661,77" },
-        { "label": "Live RTP", "value": "95,88%" },
-        { "label": "Average win", "value": "R$ 1,54" }
+        { "key": "onlineNow", "value": 301, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 21872661.77, "format": "currency" },
+        { "key": "liveRtp", "value": 95.88, "format": "percent" },
+        { "key": "avgWin", "value": 1.54, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "ju**", "payout": "R$ 320,00", "bet": "R$ 1,00", "multiplier": "320x" },
-        { "player": "ro**", "payout": "R$ 242,00", "bet": "R$ 1,00", "multiplier": "242x" },
-        { "player": "le**", "payout": "R$ 144,00", "bet": "R$ 1,00", "multiplier": "144x" }
+        { "player": "ju**", "payout": 320, "bet": 1, "multiplier": 320 },
+        { "player": "ro**", "payout": 242, "bet": 1, "multiplier": 242 },
+        { "player": "le**", "payout": 144, "bet": 1, "multiplier": 144 }
       ]
     },
     {
       "id": "jetx",
       "name": "JetX",
       "provider": "Smartsoft",
-      "badge": "241",
-      "online": "241",
-      "todayPayout": "R$ 995.236,77",
-      "lastMinutes": "R$ 22.114,99",
-      "rtp": "97,30%",
-      "family": "Futuristic crash",
-      "likes": "8440",
-      "dislikes": "1840",
-      "tone": "green",
+      "tone": "sky",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash"],
+      "family": {
+        "en": "Futuristic crash game with jet boosts",
+        "es": "Crash futurista con propulsion a chorro",
+        "pt": "Crash futurista com impulso a jato"
+      },
+      "badge": 241,
+      "online": 241,
+      "todayPayout": 995236.77,
+      "lastMinutes": 22114.99,
+      "rtp": 97.3,
+      "likes": 8440,
+      "dislikes": 1840,
       "stats": [
-        { "label": "Online now", "value": "274", "highlight": true },
-        { "label": "Total paid", "value": "R$ 32.108.554,14" },
-        { "label": "Live RTP", "value": "96,93%" },
-        { "label": "Average win", "value": "R$ 2,08" }
+        { "key": "onlineNow", "value": 274, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 32108554.14, "format": "currency" },
+        { "key": "liveRtp", "value": 96.93, "format": "percent" },
+        { "key": "avgWin", "value": 2.08, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "ve**", "payout": "R$ 480,00", "bet": "R$ 1,00", "multiplier": "480x" },
-        { "player": "li**", "payout": "R$ 355,00", "bet": "R$ 1,00", "multiplier": "355x" },
-        { "player": "ru**", "payout": "R$ 290,00", "bet": "R$ 1,00", "multiplier": "290x" }
+        { "player": "ve**", "payout": 480, "bet": 1, "multiplier": 480 },
+        { "player": "li**", "payout": 355, "bet": 1, "multiplier": 355 },
+        { "player": "ru**", "payout": 290, "bet": 1, "multiplier": 290 }
       ]
     },
     {
       "id": "spaceman",
-      "name": "Live - Spaceman",
+      "name": "Live Spaceman",
       "provider": "Pragmatic Play",
-      "badge": "5",
-      "online": "5",
-      "todayPayout": "R$ 111.475,11",
-      "lastMinutes": "R$ 6.018,88",
-      "rtp": "96,50%",
-      "family": "Live crash",
-      "likes": "3290",
-      "dislikes": "711",
-      "tone": "purple",
+      "tone": "violet",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash"],
+      "family": {
+        "en": "Space-themed live crash room",
+        "es": "Sala crash en vivo con tema espacial",
+        "pt": "Sala crash ao vivo com tema espacial"
+      },
+      "badge": 5,
+      "online": 5,
+      "todayPayout": 111475.11,
+      "lastMinutes": 6018.88,
+      "rtp": 96.5,
+      "likes": 3290,
+      "dislikes": 711,
       "stats": [
-        { "label": "Online now", "value": "98", "highlight": true },
-        { "label": "Total paid", "value": "R$ 5.998.370,10" },
-        { "label": "Live RTP", "value": "95,98%" },
-        { "label": "Average win", "value": "R$ 1,14" }
+        { "key": "onlineNow", "value": 98, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 5998370.1, "format": "currency" },
+        { "key": "liveRtp", "value": 95.98, "format": "percent" },
+        { "key": "avgWin", "value": 1.14, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "he**", "payout": "R$ 200,00", "bet": "R$ 1,00", "multiplier": "200x" },
-        { "player": "ot**", "payout": "R$ 158,00", "bet": "R$ 1,00", "multiplier": "158x" },
-        { "player": "ga**", "payout": "R$ 104,00", "bet": "R$ 1,00", "multiplier": "104x" }
+        { "player": "he**", "payout": 200, "bet": 1, "multiplier": 200 },
+        { "player": "ot**", "payout": 158, "bet": 1, "multiplier": 158 },
+        { "player": "ga**", "payout": 104, "bet": 1, "multiplier": 104 }
       ]
     },
     {
       "id": "banana-mines",
       "name": "Banana Mines",
       "provider": "Smartsoft",
-      "badge": "7",
-      "online": "7",
-      "todayPayout": "R$ 122.083,00",
-      "lastMinutes": "R$ 4.902,18",
-      "rtp": "96,20%",
-      "family": "Casual mini game",
-      "likes": "2700",
-      "dislikes": "580",
       "tone": "gold",
+      "category": "crash",
       "section": "crash",
       "tags": ["crash"],
+      "family": {
+        "en": "Casual mines variant with fruit theme",
+        "es": "Variante casual de minas con tema frutal",
+        "pt": "Variante casual de minas com tema frutado"
+      },
+      "badge": 7,
+      "online": 7,
+      "todayPayout": 122083,
+      "lastMinutes": 4902.18,
+      "rtp": 96.2,
+      "likes": 2700,
+      "dislikes": 580,
       "stats": [
-        { "label": "Online now", "value": "88", "highlight": true },
-        { "label": "Total paid", "value": "R$ 4.221.700,02" },
-        { "label": "Live RTP", "value": "95,44%" },
-        { "label": "Average win", "value": "R$ 0,98" }
+        { "key": "onlineNow", "value": 88, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 4221700.02, "format": "currency" },
+        { "key": "liveRtp", "value": 95.44, "format": "percent" },
+        { "key": "avgWin", "value": 0.98, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "na**", "payout": "R$ 92,00", "bet": "R$ 1,00", "multiplier": "92x" },
-        { "player": "ir**", "payout": "R$ 70,00", "bet": "R$ 1,00", "multiplier": "70x" },
-        { "player": "la**", "payout": "R$ 56,00", "bet": "R$ 1,00", "multiplier": "56x" }
+        { "player": "na**", "payout": 92, "bet": 1, "multiplier": 92 },
+        { "player": "ir**", "payout": 70, "bet": 1, "multiplier": 70 },
+        { "player": "la**", "payout": 56, "bet": 1, "multiplier": 56 }
       ]
     },
     {
       "id": "bac-bo",
       "name": "Bac Bo",
       "provider": "Evolution",
-      "badge": "426",
-      "online": "426",
-      "todayPayout": "R$ 1.746.425,50",
-      "lastMinutes": "R$ 14.681,20",
-      "rtp": "97,30%",
-      "family": "Live table",
-      "likes": "10492",
-      "dislikes": "2288",
-      "tone": "green",
+      "tone": "forest",
+      "category": "live",
       "section": "popular",
       "tags": ["live", "popular"],
+      "family": {
+        "en": "Live table inspired by dice and baccarat",
+        "es": "Mesa en vivo inspirada en dados y baccarat",
+        "pt": "Mesa ao vivo inspirada em dados e baccarat"
+      },
+      "badge": 426,
+      "online": 426,
+      "todayPayout": 1746425.5,
+      "lastMinutes": 14681.2,
+      "rtp": 97.3,
+      "likes": 10492,
+      "dislikes": 2288,
       "stats": [
-        { "label": "Online now", "value": "233", "highlight": true },
-        { "label": "Total paid", "value": "R$ 45.822.990,10" },
-        { "label": "Live RTP", "value": "97,01%" },
-        { "label": "Average win", "value": "R$ 4,71" }
+        { "key": "onlineNow", "value": 233, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 45822990.1, "format": "currency" },
+        { "key": "liveRtp", "value": 97.01, "format": "percent" },
+        { "key": "avgWin", "value": 4.71, "format": "currency" }
       ],
       "bigWins": [
-        { "player": "we**", "payout": "R$ 1.120,00", "bet": "R$ 5,00", "multiplier": "224x" },
-        { "player": "jo**", "payout": "R$ 880,00", "bet": "R$ 4,00", "multiplier": "220x" },
-        { "player": "lu**", "payout": "R$ 640,00", "bet": "R$ 2,00", "multiplier": "320x" }
+        { "player": "we**", "payout": 1120, "bet": 5, "multiplier": 224 },
+        { "player": "jo**", "payout": 880, "bet": 4, "multiplier": 220 },
+        { "player": "lu**", "payout": 640, "bet": 2, "multiplier": 320 }
+      ]
+    },
+    {
+      "id": "gates-of-olympus",
+      "name": "Gates of Olympus",
+      "provider": "Pragmatic Play",
+      "tone": "sky",
+      "category": "slot",
+      "section": "popular",
+      "tags": ["slots", "popular"],
+      "family": {
+        "en": "Mythology slot with tumble multipliers",
+        "es": "Slot mitologico con multiplicadores en cascada",
+        "pt": "Slot mitologico com multiplicadores em cascata"
+      },
+      "badge": 1208,
+      "online": 1208,
+      "todayPayout": 18447993.12,
+      "lastMinutes": 133221.49,
+      "rtp": 96.5,
+      "likes": 27980,
+      "dislikes": 6122,
+      "stats": [
+        { "key": "onlineNow", "value": 1146, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 254220842.44, "format": "currency" },
+        { "key": "liveRtp", "value": 96.22, "format": "percent" },
+        { "key": "avgWin", "value": 2.92, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "ga**", "payout": 2240, "bet": 4, "multiplier": 560 },
+        { "player": "al**", "payout": 1540, "bet": 2, "multiplier": 770 },
+        { "player": "ro**", "payout": 960, "bet": 2, "multiplier": 480 }
+      ]
+    },
+    {
+      "id": "sweet-bonanza",
+      "name": "Sweet Bonanza",
+      "provider": "Pragmatic Play",
+      "tone": "rose",
+      "category": "slot",
+      "section": "popular",
+      "tags": ["slots", "popular"],
+      "family": {
+        "en": "Candy slot with tumble reels",
+        "es": "Slot de caramelos con rodadas en cascada",
+        "pt": "Slot de doces com rodadas em cascata"
+      },
+      "badge": 988,
+      "online": 988,
+      "todayPayout": 12905318.55,
+      "lastMinutes": 81544.9,
+      "rtp": 96.51,
+      "likes": 19840,
+      "dislikes": 4770,
+      "stats": [
+        { "key": "onlineNow", "value": 874, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 188074103.91, "format": "currency" },
+        { "key": "liveRtp", "value": 96.18, "format": "percent" },
+        { "key": "avgWin", "value": 2.27, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "lu**", "payout": 1220, "bet": 2, "multiplier": 610 },
+        { "player": "be**", "payout": 840, "bet": 2, "multiplier": 420 },
+        { "player": "ca**", "payout": 560, "bet": 1, "multiplier": 560 }
+      ]
+    },
+    {
+      "id": "rooster-rumble",
+      "name": "Rooster Rumble",
+      "provider": "Pragmatic Play",
+      "tone": "amber",
+      "category": "slot",
+      "section": "popular",
+      "tags": ["slots", "popular"],
+      "family": {
+        "en": "Arena slot with rooster battles",
+        "es": "Slot de arena con peleas de gallos",
+        "pt": "Slot de arena com batalhas de galos"
+      },
+      "badge": 611,
+      "online": 611,
+      "todayPayout": 6442190.63,
+      "lastMinutes": 44208.17,
+      "rtp": 96.54,
+      "likes": 12118,
+      "dislikes": 2592,
+      "stats": [
+        { "key": "onlineNow", "value": 542, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 91602771.44, "format": "currency" },
+        { "key": "liveRtp", "value": 96.02, "format": "percent" },
+        { "key": "avgWin", "value": 1.95, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "sa**", "payout": 780, "bet": 2, "multiplier": 390 },
+        { "player": "mi**", "payout": 612, "bet": 1.5, "multiplier": 408 },
+        { "player": "fe**", "payout": 400, "bet": 1, "multiplier": 400 }
+      ]
+    },
+    {
+      "id": "zeus-vs-hades",
+      "name": "Zeus vs Hades",
+      "provider": "Pragmatic Play",
+      "tone": "sky",
+      "category": "slot",
+      "section": "slots",
+      "tags": ["slots"],
+      "family": {
+        "en": "Battle of the gods slot",
+        "es": "Slot de batalla entre dioses",
+        "pt": "Slot de batalha entre deuses"
+      },
+      "badge": 452,
+      "online": 452,
+      "todayPayout": 4881320.91,
+      "lastMinutes": 32510.42,
+      "rtp": 96.58,
+      "likes": 9930,
+      "dislikes": 2204,
+      "stats": [
+        { "key": "onlineNow", "value": 418, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 66210514.38, "format": "currency" },
+        { "key": "liveRtp", "value": 96.11, "format": "percent" },
+        { "key": "avgWin", "value": 1.83, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "ma**", "payout": 620, "bet": 2, "multiplier": 310 },
+        { "player": "to**", "payout": 511, "bet": 1, "multiplier": 511 },
+        { "player": "ra**", "payout": 390, "bet": 1, "multiplier": 390 }
+      ]
+    },
+    {
+      "id": "sugar-rush",
+      "name": "Sugar Rush",
+      "provider": "Pragmatic Play",
+      "tone": "violet",
+      "category": "slot",
+      "section": "slots",
+      "tags": ["slots"],
+      "family": {
+        "en": "Grid slot with candy clusters",
+        "es": "Slot en cuadrilla con grupos de caramelos",
+        "pt": "Slot em grade com grupos de doces"
+      },
+      "badge": 703,
+      "online": 703,
+      "todayPayout": 8110437,
+      "lastMinutes": 51006.04,
+      "rtp": 96.5,
+      "likes": 13920,
+      "dislikes": 2911,
+      "stats": [
+        { "key": "onlineNow", "value": 665, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 119444550.21, "format": "currency" },
+        { "key": "liveRtp", "value": 96.09, "format": "percent" },
+        { "key": "avgWin", "value": 2.01, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "jo**", "payout": 930, "bet": 2, "multiplier": 465 },
+        { "player": "de**", "payout": 710, "bet": 2, "multiplier": 355 },
+        { "player": "vi**", "payout": 488, "bet": 1, "multiplier": 488 }
+      ]
+    },
+    {
+      "id": "wild-bandito",
+      "name": "Wild Bandito",
+      "provider": "Pragmatic Play",
+      "tone": "ruby",
+      "category": "slot",
+      "section": "slots",
+      "tags": ["slots"],
+      "family": {
+        "en": "High-volatility outlaw slot",
+        "es": "Slot de forajido con alta volatilidad",
+        "pt": "Slot de fora da lei com alta volatilidade"
+      },
+      "badge": 287,
+      "online": 287,
+      "todayPayout": 2774209.63,
+      "lastMinutes": 19785.12,
+      "rtp": 96.1,
+      "likes": 6421,
+      "dislikes": 1421,
+      "stats": [
+        { "key": "onlineNow", "value": 241, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 37004621.88, "format": "currency" },
+        { "key": "liveRtp", "value": 95.87, "format": "percent" },
+        { "key": "avgWin", "value": 1.74, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "ta**", "payout": 510, "bet": 1, "multiplier": 510 },
+        { "player": "re**", "payout": 420, "bet": 1, "multiplier": 420 },
+        { "player": "pa**", "payout": 280, "bet": 1, "multiplier": 280 }
+      ]
+    },
+    {
+      "id": "starlight-princess",
+      "name": "Starlight Princess",
+      "provider": "Pragmatic Play",
+      "tone": "violet",
+      "category": "slot",
+      "section": "slots",
+      "tags": ["slots"],
+      "family": {
+        "en": "Anime fantasy slot with celestial symbols",
+        "es": "Slot anime fantastico con simbolos celestes",
+        "pt": "Slot anime fantastico com simbolos celestes"
+      },
+      "badge": 562,
+      "online": 562,
+      "todayPayout": 5702601.18,
+      "lastMinutes": 38201.44,
+      "rtp": 96.5,
+      "likes": 11602,
+      "dislikes": 2408,
+      "stats": [
+        { "key": "onlineNow", "value": 508, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 78335220.4, "format": "currency" },
+        { "key": "liveRtp", "value": 96.08, "format": "percent" },
+        { "key": "avgWin", "value": 1.97, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "na**", "payout": 690, "bet": 2, "multiplier": 345 },
+        { "player": "je**", "payout": 540, "bet": 1.5, "multiplier": 360 },
+        { "player": "lu**", "payout": 330, "bet": 1, "multiplier": 330 }
+      ]
+    },
+    {
+      "id": "balloon",
+      "name": "Balloon",
+      "provider": "Smartsoft",
+      "tone": "sky",
+      "category": "crash",
+      "section": "crash",
+      "tags": ["crash"],
+      "family": {
+        "en": "Light crash game with rising balloon rounds",
+        "es": "Crash ligero con rondas de globo ascendente",
+        "pt": "Crash leve com rodadas de balao ascendente"
+      },
+      "badge": 188,
+      "online": 188,
+      "todayPayout": 1220514.78,
+      "lastMinutes": 17220.09,
+      "rtp": 97.1,
+      "likes": 7140,
+      "dislikes": 1551,
+      "stats": [
+        { "key": "onlineNow", "value": 212, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 28842410.03, "format": "currency" },
+        { "key": "liveRtp", "value": 96.77, "format": "percent" },
+        { "key": "avgWin", "value": 2.33, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "be**", "payout": 610, "bet": 2, "multiplier": 305 },
+        { "player": "ru**", "payout": 450, "bet": 1.5, "multiplier": 300 },
+        { "player": "an**", "payout": 280, "bet": 1, "multiplier": 280 }
+      ]
+    },
+    {
+      "id": "plinko-x",
+      "name": "Plinko X",
+      "provider": "Smartsoft",
+      "tone": "forest",
+      "category": "crash",
+      "section": "crash",
+      "tags": ["crash"],
+      "family": {
+        "en": "Drop game with plinko multipliers",
+        "es": "Juego de caida con multiplicadores plinko",
+        "pt": "Jogo de queda com multiplicadores plinko"
+      },
+      "badge": 145,
+      "online": 145,
+      "todayPayout": 932004.18,
+      "lastMinutes": 10489.4,
+      "rtp": 96.9,
+      "likes": 5410,
+      "dislikes": 1212,
+      "stats": [
+        { "key": "onlineNow", "value": 173, "format": "number", "highlight": true },
+        { "key": "totalPaid", "value": 19841220.66, "format": "currency" },
+        { "key": "liveRtp", "value": 96.54, "format": "percent" },
+        { "key": "avgWin", "value": 1.88, "format": "currency" }
+      ],
+      "bigWins": [
+        { "player": "li**", "payout": 420, "bet": 1, "multiplier": 420 },
+        { "player": "ot**", "payout": 270, "bet": 1, "multiplier": 270 },
+        { "player": "ed**", "payout": 162, "bet": 1, "multiplier": 162 }
       ]
     }
   ]
