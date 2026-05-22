@@ -857,10 +857,11 @@ function renderJackpots() {
 
 function renderPromoHero() {
   const copy = UI_COPY[state.locale];
+  const primaryBanners = copy.heroBanners.slice(0, 3);
 
   elements.promoHeroRow.innerHTML = `
     <div class="hero-banner-grid">
-      ${copy.heroBanners
+      ${primaryBanners
         .map((banner) => {
           const game = getGameById(banner.gameId);
           return `
@@ -1431,12 +1432,12 @@ function getVisibleGameCount() {
     return 2;
   }
   if (viewport <= 1200) {
-    return 3;
-  }
-  if (viewport <= 1520) {
     return 4;
   }
-  return 5;
+  if (viewport <= 1520) {
+    return 6;
+  }
+  return 8;
 }
 
 function shiftShelf(shelfKey, direction) {

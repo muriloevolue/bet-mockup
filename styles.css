@@ -432,9 +432,12 @@ button {
 }
 
 .ticker-card {
-  padding: 16px 18px;
-  border-radius: 18px;
+  min-height: 70px;
+  padding: 14px 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  align-content: center;
 }
 
 .ticker-card em {
@@ -450,15 +453,18 @@ button {
 .jackpot-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .jackpot-card {
-  padding: 14px;
-  border-radius: 20px;
+  grid-template-columns: 72px minmax(0, 1fr) 110px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 18px;
   background: var(--panel);
   display: grid;
-  gap: 12px;
+  gap: 10px;
+  position: relative;
 }
 
 .jackpot-rank,
@@ -489,12 +495,13 @@ button {
 }
 
 .jackpot-thumb {
-  aspect-ratio: 1.32;
+  aspect-ratio: 1;
+  min-height: 60px;
 }
 
 .promo-hero-row {
   display: grid;
-  grid-template-columns: minmax(0, 2.4fr) minmax(260px, 0.85fr);
+  grid-template-columns: minmax(0, 2.65fr) minmax(250px, 0.85fr);
   gap: 16px;
 }
 
@@ -518,7 +525,7 @@ button {
 }
 
 .hero-banner-art {
-  aspect-ratio: 1.35;
+  aspect-ratio: 1.12;
 }
 
 .hero-banner-content,
@@ -578,11 +585,11 @@ button {
 
 .side-promo-card {
   display: grid;
-  grid-template-columns: 88px 1fr auto;
+  grid-template-columns: 72px 1fr auto;
   gap: 12px;
   align-items: center;
   padding: 14px;
-  border-radius: 20px;
+  border-radius: 18px;
   background: var(--panel);
 }
 
@@ -639,7 +646,7 @@ button {
 }
 
 .game-tile {
-  border-radius: 22px;
+  border-radius: 18px;
   background: var(--panel);
   overflow: hidden;
   display: grid;
@@ -647,11 +654,11 @@ button {
 
 .game-tile-cover {
   position: relative;
-  aspect-ratio: 0.85;
+  aspect-ratio: 0.78;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 14px;
+  padding: 10px;
 }
 
 .viewer-pill {
@@ -659,9 +666,9 @@ button {
 }
 
 .game-tile-body {
-  padding: 16px;
+  padding: 12px;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .payout-line {
@@ -678,8 +685,20 @@ button {
 
 .tile-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.game-tile-body strong {
+  font-size: 0.95rem;
+}
+
+.game-tile-body span,
+.payout-line small,
+.hero-banner-content span,
+.side-promo-card span,
+.jackpot-copy span {
+  font-size: 0.82rem;
 }
 
 .back-link {
@@ -1260,6 +1279,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .jackpot-card {
+    grid-template-columns: 64px minmax(0, 1fr) 100px;
+  }
+
   .wins-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1300,6 +1323,14 @@ button {
 
   .hero-banner-grid {
     grid-template-columns: 1fr;
+  }
+
+  .jackpot-card {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .jackpot-card .outline-button {
+    grid-column: 1 / -1;
   }
 
   .shelf-carousel {
