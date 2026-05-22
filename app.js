@@ -555,7 +555,7 @@ function renderPromoHero() {
                 <span>${banner.badge}</span>
                 <strong>${banner.title}</strong>
                 <p>${banner.subtitle}</p>
-                <button class="hero-banner-button">${banner.cta}</button>
+                <button class="hero-banner-button" data-game-id="${banner.gameId}">${banner.cta}</button>
               </div>
             </article>
           `
@@ -572,13 +572,15 @@ function renderPromoHero() {
                 <span>${banner.badge}</span>
                 <strong>${banner.title}</strong>
               </div>
-              <button class="outline-button compact">${banner.cta}</button>
+              <button class="outline-button compact" data-game-id="${banner.gameId}">${banner.cta}</button>
             </article>
           `
         )
         .join("")}
     </div>
   `;
+
+  bindGameLaunchers(elements.promoHeroRow);
 }
 
 function renderShelves() {

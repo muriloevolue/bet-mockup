@@ -42,14 +42,14 @@
     { "rank": 9, "name": "Bac Bo", "amount": "R$ 2.272.854,50", "tone": "green", "gameId": "bac-bo" }
   ],
   "heroBanners": [
-    { "badge": "New games", "title": "New Games", "subtitle": "Now available in the casino", "cta": "Play now!", "tone": "blue" },
-    { "badge": "Auto Mega Roulette", "title": "Up to 500x", "subtitle": "Featured multipliers", "cta": "Enjoy now!", "tone": "purple" },
-    { "badge": "Tournament", "title": "R$ 50k", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red" }
+    { "badge": "New games", "title": "New Games", "subtitle": "Now available in the casino", "cta": "Play now!", "tone": "blue", "gameId": "fortune-dragon" },
+    { "badge": "Auto Mega Roulette", "title": "Up to 500x", "subtitle": "Featured multipliers", "cta": "Enjoy now!", "tone": "purple", "gameId": "aviator" },
+    { "badge": "Tournament", "title": "R$ 50k", "subtitle": "In lobby prizes", "cta": "Join now!", "tone": "red", "gameId": "fortune-tiger" }
   ],
   "sideBanners": [
-    { "badge": "Download our", "title": "Casino App!", "cta": "Download" },
-    { "badge": "Up to 25%", "title": "Cashback!", "cta": "Claim" },
-    { "badge": "Platform", "title": "Regulated", "cta": "Learn more" }
+    { "badge": "Download our", "title": "Casino App!", "cta": "Download", "gameId": "fortune-rabbit" },
+    { "badge": "Up to 25%", "title": "Cashback!", "cta": "Claim", "gameId": "aviator-crash" },
+    { "badge": "Platform", "title": "Regulated", "cta": "Learn more", "gameId": "bac-bo" }
   ],
   "games": [
     {
